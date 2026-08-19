@@ -34,7 +34,6 @@ import NextStepsPage from "./NextStepsPage";
 import WorkMapPage from "./WorkMapPage";
 import LittleWinsPage from "./LittleWinsPage";
 import LittleJournalPage from "./LittleJournalPage";
-import BrainStudioPage from "./BrainStudioPage";
 import SpotifyFloatingPlayer, {
   type SpotifyAnnotationTrack,
 } from "./SpotifyFloatingPlayer";
@@ -65,7 +64,6 @@ type ActivePage =
   | "progress"
   | "history"
   | "journal"
-  | "brain"
   | "nudges"
   | "about"
   | "themes";
@@ -278,7 +276,6 @@ const navigation = [
   { id: "progress", name: "little wins", short: "w" },
   { id: "history", name: "my work trail", short: "t" },
   { id: "journal", name: "my little journal", short: "j" },
-  { id: "brain", name: "brain studio", short: "b" },
 ];
 
 function getTodayKey() {
@@ -1038,17 +1035,6 @@ function AppContent() {
       );
     }
 
-    if (activePage === "brain") {
-      return (
-        <BrainStudioPage
-          formattedDate={formattedDate}
-          themeName={currentTheme.name}
-          themeDescription={currentTheme.description}
-          themeBanner={currentTheme.banner}
-        />
-      );
-    }
-
     if (activePage === "nudges") {
       return (
         <LittleNudgesPage
@@ -1358,8 +1344,7 @@ function AppContent() {
               item.id === "planner" ||
               item.id === "progress" ||
               item.id === "history" ||
-              item.id === "journal" ||
-              item.id === "brain";
+              item.id === "journal";
             const isActive = activePage === item.id;
 
             return (
@@ -1380,17 +1365,15 @@ function AppContent() {
                             ? "history"
                             : item.id === "video"
                               ? "video"
-                            : item.id === "planner"
-                              ? "planner"
-                            : item.id === "progress"
-                              ? "progress"
-                            : item.id === "goals"
-                              ? "goals"
-                            : item.id === "journal"
-                              ? "journal"
-                            : item.id === "brain"
-                              ? "brain"
-                            : "daily"
+                              : item.id === "planner"
+                                ? "planner"
+                                : item.id === "progress"
+                                  ? "progress"
+                                  : item.id === "goals"
+                                    ? "goals"
+                                    : item.id === "journal"
+                                      ? "journal"
+                                      : "daily"
                         )
                     : undefined
                 }
