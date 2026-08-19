@@ -1,0 +1,24 @@
+pace & pulse — refactor step 7
+
+this package is based on the complete step 6 source and is not empty.
+
+changed:
+- DailyRhythmTools.tsx reduced from 1,275 lines to 817 lines
+- added src/features/daily-rhythm/types.ts
+- added src/features/daily-rhythm/constants.ts
+- added src/features/daily-rhythm/storage.ts
+- added src/features/daily-rhythm/formatters.ts
+
+preserved:
+- all existing dashboard visuals and css classes
+- work timer behaviour
+- small plan behaviour
+- gentle check-in behaviour
+- water, pee and movement tracking
+- daily routine and optional routine items
+- annotation milestones, rhythm points and rewards
+- localStorage keys and autosave behaviour
+- all previous refactors and expanded brain teasers
+
+installation:
+replace your current src folder with the src folder in this zip.

@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title">
+  <title id="title">pace and pulse</title>
+  <rect width="512" height="512" rx="128" fill="#d9c9ad"/>
+  <circle cx="256" cy="256" r="184" fill="#ece2cf" stroke="#5d8278" stroke-width="14"/>
+  <path d="M309 116c-67 20-111 82-102 151 9 69 68 122 138 123-31 29-72 46-117 46-95 0-172-77-172-172 0-91 71-165 161-171 34-2 65 6 92 23z" fill="none" stroke="#4c463d" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M183 309c25-38 47 35 74-5 25-38 51 25 78-13" fill="none" stroke="#5d8278" stroke-width="16" stroke-linecap="round"/>
+  <path d="M333 186v91c0 20-15 36-35 36-16 0-29-11-29-25 0-16 15-28 34-28 5 0 10 1 15 3V171l65-14v35z" fill="none" stroke="#9f752a" stroke-width="15" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M155 343c-28 14-43 35-50 62 30-2 52-15 67-40m181-10c27 13 43 34 52 60-30 0-53-12-69-36" fill="none" stroke="#6f8061" stroke-width="12" stroke-linecap="round"/>
+  <path d="M105 405c19-22 38-25 57-17m243 27c-19-21-38-24-57-15" fill="none" stroke="#6f8061" stroke-width="10" stroke-linecap="round"/>
+  <path d="M397 102l7 19 19 7-19 7-7 19-7-19-19-7 19-7z" fill="#9f752a"/>
+</svg>

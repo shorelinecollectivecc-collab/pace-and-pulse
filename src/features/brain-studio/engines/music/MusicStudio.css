@@ -1,0 +1,582 @@
+.music-studio {
+  width: 100%;
+  min-width: 0;
+  display: grid;
+  gap: 12px;
+  color: var(--ink);
+  container-type: inline-size;
+}
+
+.music-studio *,
+.music-studio *::before,
+.music-studio *::after {
+  box-sizing: border-box;
+}
+
+.music-studio button {
+  font: inherit;
+}
+
+.music-studio-top {
+  min-width: 0;
+  display: grid;
+  grid-template-columns:
+    minmax(370px, 1fr)
+    auto;
+  align-items: end;
+  gap: 12px;
+  padding-bottom: 11px;
+  border-bottom: 1px solid var(--line);
+}
+
+.music-levels {
+  min-width: 0;
+  display: grid;
+  gap: 6px;
+}
+
+.music-levels > span {
+  color: var(--muted);
+  font-size: 10px;
+}
+
+.music-levels > div {
+  display: grid;
+  grid-template-columns:
+    repeat(5, minmax(66px, 1fr));
+  gap: 7px;
+}
+
+.music-levels button {
+  min-width: 0;
+  min-height: 38px;
+  padding: 6px 10px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  color: var(--muted);
+  background: transparent;
+  cursor: pointer;
+}
+
+.music-levels button.active {
+  border-color: var(--accent);
+  color: var(--ink);
+  background: var(--accent-soft);
+  box-shadow: inset 0 0 0 1px var(--accent);
+}
+
+.music-stats {
+  display: grid;
+  grid-template-columns:
+    repeat(5, minmax(68px, 1fr));
+  gap: 6px;
+}
+
+.music-stats > span {
+  min-width: 68px;
+  display: grid;
+  gap: 2px;
+  padding: 7px 8px;
+  border: 1px solid var(--line);
+  border-radius: 11px;
+  color: var(--muted);
+  background: color-mix(
+    in srgb,
+    var(--surface) 92%,
+    var(--accent-soft)
+  );
+  font-size: 9px;
+  text-align: center;
+}
+
+.music-stats strong {
+  color: var(--number);
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.music-task-buttons {
+  display: grid;
+  grid-template-columns:
+    repeat(8, minmax(0, 1fr));
+  gap: 6px;
+}
+
+.music-task-buttons button {
+  min-width: 0;
+  min-height: 48px;
+  display: grid;
+  place-items: center;
+  align-content: center;
+  gap: 1px;
+  padding: 4px;
+  border: 1px solid var(--line);
+  border-radius: 11px;
+  color: var(--muted);
+  background: color-mix(
+    in srgb,
+    var(--surface) 94%,
+    var(--accent-soft)
+  );
+  cursor: pointer;
+}
+
+.music-task-buttons button > span {
+  color: var(--symbol);
+  font-size: 17px;
+  line-height: 1;
+}
+
+.music-task-buttons button small {
+  font-size: 9px;
+}
+
+.music-task-buttons button.active {
+  border-color: var(--accent);
+  color: var(--ink);
+  background: var(--accent-soft);
+  box-shadow: inset 0 0 0 1px var(--accent);
+}
+
+.music-browser {
+  display: grid;
+  grid-template-columns:
+    repeat(12, minmax(0, 1fr));
+  gap: 5px;
+  padding: 9px;
+  border: 1px dashed var(--line);
+  border-radius: 12px;
+}
+
+.music-browser button {
+  min-width: 0;
+  min-height: 31px;
+  padding: 3px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  color: var(--muted);
+  background: var(--surface);
+  cursor: pointer;
+}
+
+.music-browser button.current {
+  border-color: var(--accent);
+  background: var(--accent-soft);
+}
+
+.music-browser button.done {
+  color: var(--ink);
+}
+
+.music-puzzle {
+  min-width: 0;
+  display: grid;
+  gap: 11px;
+  padding: 14px;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: color-mix(
+    in srgb,
+    var(--surface) 96%,
+    var(--accent-soft)
+  );
+}
+
+.music-puzzle-heading {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.music-puzzle-heading > div {
+  display: grid;
+  gap: 2px;
+}
+
+.music-puzzle-heading span,
+.music-puzzle-heading small {
+  color: var(--muted);
+  font-size: 9px;
+}
+
+.music-puzzle-heading h3 {
+  margin: 0;
+  color: var(--ink);
+  font-size: clamp(21px, 2.3vw, 31px);
+  font-weight: 500;
+  line-height: 1.05;
+}
+
+.music-puzzle-heading p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 11px;
+}
+
+.music-question {
+  min-height: 108px;
+  display: grid;
+  place-items: center;
+  align-content: center;
+  gap: 10px;
+  padding: 14px;
+  border: 1px dashed var(--line);
+  border-radius: 14px;
+  background:
+    linear-gradient(
+      color-mix(
+          in srgb,
+          var(--line) 13%,
+          transparent
+        )
+        1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      color-mix(
+          in srgb,
+          var(--line) 13%,
+          transparent
+        )
+        1px,
+      transparent 1px
+    ),
+    color-mix(
+      in srgb,
+      var(--surface) 98%,
+      white
+    );
+  background-size: 24px 24px;
+  text-align: center;
+}
+
+.music-question p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.music-question strong {
+  color: var(--ink);
+  font-size: clamp(28px, 4.4vw, 55px);
+  font-weight: 500;
+  line-height: 1;
+}
+
+.music-options {
+  display: grid;
+  grid-template-columns:
+    repeat(4, minmax(0, 1fr));
+  gap: 7px;
+}
+
+.music-options button {
+  min-width: 0;
+  min-height: 44px;
+  padding: 7px 9px;
+  border: 1px solid var(--line);
+  border-radius: 11px;
+  color: var(--muted);
+  background: var(--surface);
+  cursor: pointer;
+}
+
+.music-options button.selected,
+.piano-white-key.selected,
+.piano-black-key.selected {
+  border-color: var(--accent);
+  box-shadow: inset 0 0 0 1px var(--accent);
+}
+
+.music-options button.correct,
+.piano-white-key.correct,
+.piano-black-key.correct {
+  border-color: var(--accent);
+  background: var(--accent-soft);
+}
+
+.music-options button.wrong,
+.piano-white-key.wrong,
+.piano-black-key.wrong {
+  border-color: var(--number);
+}
+
+.piano-area {
+  display: grid;
+  gap: 9px;
+}
+
+.piano-scroll {
+  width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 2px 2px 8px;
+  scrollbar-width: thin;
+}
+
+.piano-keyboard {
+  --white-key-width: 36px;
+  --black-key-width: 22px;
+  position: relative;
+  width: calc(22 * var(--white-key-width));
+  height: 168px;
+  display: flex;
+  align-items: flex-start;
+  border: 2px solid var(--ink);
+  border-radius: 9px;
+  background: var(--ink);
+  overflow: hidden;
+}
+
+.piano-white-key {
+  position: relative;
+  flex: 0 0 var(--white-key-width);
+  width: var(--white-key-width);
+  height: 164px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding: 0 1px 8px;
+  border: 0;
+  border-right: 1px solid var(--ink);
+  border-radius: 0 0 5px 5px;
+  color: var(--muted);
+  background: color-mix(
+    in srgb,
+    var(--surface) 96%,
+    white
+  );
+  cursor: pointer;
+  z-index: 1;
+}
+
+.piano-white-key span {
+  width: 100%;
+  overflow: hidden;
+  color: var(--muted);
+  font-size: 8px;
+  line-height: 1;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.piano-black-key {
+  position: absolute;
+  top: 0;
+  z-index: 3;
+  width: var(--black-key-width);
+  height: 102px;
+  padding: 0;
+  border: 1px solid var(--ink);
+  border-radius: 0 0 5px 5px;
+  background: color-mix(
+    in srgb,
+    var(--ink) 94%,
+    black
+  );
+  cursor: pointer;
+  transform: translateX(-50%);
+}
+
+.piano-white-key:hover,
+.piano-white-key.selected {
+  background: var(--accent-soft);
+}
+
+.piano-black-key:hover,
+.piano-black-key.selected {
+  background: color-mix(
+    in srgb,
+    var(--accent) 65%,
+    var(--ink)
+  );
+}
+
+.piano-white-key:active,
+.piano-black-key:active {
+  transform: translateY(2px);
+}
+
+.piano-black-key:active {
+  transform:
+    translateX(-50%)
+    translateY(2px);
+}
+
+.piano-selected {
+  display: grid;
+  grid-template-columns:
+    auto auto minmax(0, 1fr);
+  align-items: center;
+  gap: 10px;
+  padding: 8px 11px;
+  border: 1px solid var(--line);
+  border-radius: 11px;
+  color: var(--muted);
+  font-size: 10px;
+}
+
+.piano-selected strong {
+  color: var(--number);
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.piano-selected small {
+  text-align: right;
+}
+
+.music-message {
+  min-height: 44px;
+  display: grid;
+  grid-template-columns:
+    28px minmax(0, 1fr);
+  align-items: center;
+  gap: 9px;
+  padding: 7px 10px;
+  border: 1px solid var(--line);
+  border-radius: 11px;
+  background: color-mix(
+    in srgb,
+    var(--surface) 92%,
+    var(--accent-soft)
+  );
+}
+
+.music-message > span {
+  width: 27px;
+  height: 27px;
+  display: grid;
+  place-items: center;
+  border: 1px solid var(--symbol);
+  border-radius: 50%;
+  color: var(--symbol);
+}
+
+.music-message p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 10px;
+}
+
+.music-message.complete {
+  border-color: var(--accent);
+  background: var(--accent-soft);
+}
+
+.music-answer-actions {
+  display: grid;
+  grid-template-columns:
+    minmax(0, 1fr)
+    minmax(0, 2fr);
+  gap: 7px;
+}
+
+.music-answer-actions button,
+.music-navigation button {
+  min-height: 39px;
+  padding: 6px 9px;
+  border: 1px solid var(--line);
+  border-radius: 11px;
+  color: var(--muted);
+  background: color-mix(
+    in srgb,
+    var(--surface) 94%,
+    var(--accent-soft)
+  );
+  cursor: pointer;
+}
+
+.music-answer-actions button.check {
+  border-color: var(--accent);
+  color: var(--button-text);
+  background: var(--button);
+}
+
+.music-answer-actions button:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.music-navigation {
+  display: grid;
+  grid-template-columns:
+    repeat(4, minmax(0, 1fr));
+  gap: 7px;
+}
+
+.music-studio button:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+@container (max-width: 900px) {
+  .music-studio-top {
+    grid-template-columns: 1fr;
+  }
+
+  .music-task-buttons {
+    grid-template-columns:
+      repeat(4, minmax(0, 1fr));
+  }
+
+  .music-stats {
+    width: 100%;
+  }
+}
+
+@container (max-width: 650px) {
+  .music-levels > div {
+    grid-template-columns:
+      repeat(3, minmax(0, 1fr));
+  }
+
+  .music-stats {
+    grid-template-columns:
+      repeat(3, minmax(0, 1fr));
+  }
+
+  .music-options {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+
+  .music-browser {
+    grid-template-columns:
+      repeat(8, minmax(0, 1fr));
+  }
+
+  .music-navigation {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+}
+
+@container (max-width: 430px) {
+  .music-levels > div,
+  .music-stats,
+  .music-task-buttons,
+  .music-options,
+  .music-answer-actions,
+  .music-navigation {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+
+  .music-browser {
+    grid-template-columns:
+      repeat(6, minmax(0, 1fr));
+  }
+
+  .piano-selected {
+    grid-template-columns:
+      1fr auto;
+  }
+
+  .piano-selected small {
+    grid-column: 1 / -1;
+    text-align: left;
+  }
+}

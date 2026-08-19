@@ -1,0 +1,584 @@
+/*
+  pace & pulse theme palettes
+
+  every theme has its own:
+  - background
+  - surfaces
+  - writing
+  - muted writing
+  - main accent
+  - secondary accent
+  - progress bars
+  - slider controls
+  - buttons
+  - symbols
+*/
+
+.app-layout {
+  color: var(--ink);
+  accent-color: var(--accent);
+}
+
+/* shared theme behaviour */
+
+.page-header h1,
+.workspace-card h2,
+.earnings-card h2,
+.count,
+.count strong,
+.count span,
+.earnings-total,
+.earnings-total strong,
+.stat-value,
+.profile-copy strong {
+  color: var(--ink);
+}
+
+.page-header p,
+.card-copy,
+.progress-copy,
+.stat-label,
+.profile-copy small,
+.nav-item {
+  color: var(--muted);
+}
+
+.eyebrow,
+.card-kicker,
+.currency-secondary,
+.earnings-note,
+.save-state,
+.status-text {
+  color: var(--accent);
+}
+
+.status-dot,
+.nav-mark,
+.nav-item::before {
+  background: var(--symbol);
+}
+
+.progress-track {
+  background: var(--accent-soft);
+}
+
+.progress-fill {
+  background: var(--progress);
+}
+
+.app-layout .count strong,
+.app-layout .count span,
+.app-layout .earnings-value strong,
+.app-layout .earnings-value span,
+.app-layout .earnings-detail strong,
+.app-layout .stat-value,
+.app-layout .earnings-total,
+.app-layout .earnings-total strong {
+  color: var(--number) !important;
+}
+
+.add-button,
+.primary-button {
+  background: var(--button);
+  color: var(--button-text);
+}
+
+.add-button:hover,
+.primary-button:hover {
+  background: var(--button-hover);
+}
+
+.secondary-button,
+.undo-button {
+  color: var(--accent);
+  border-color: var(--accent);
+}
+
+input[type="range"] {
+  accent-color: var(--slider);
+}
+
+input[type="range"]::-webkit-slider-runnable-track {
+  background: var(--accent-soft);
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  background: var(--slider);
+  border-color: var(--surface);
+}
+
+input[type="range"]::-moz-range-track {
+  background: var(--accent-soft);
+}
+
+input[type="range"]::-moz-range-progress {
+  background: var(--progress);
+}
+
+input[type="range"]::-moz-range-thumb {
+  background: var(--slider);
+  border-color: var(--surface);
+}
+
+button svg,
+.icon,
+.profile-chevron {
+  color: var(--symbol);
+}
+
+.sidebar .sidebar-brand h1,
+.sidebar .sidebar-brand > span,
+.sidebar .profile-copy strong,
+.sidebar .profile-chevron {
+  color: var(--sidebar-text);
+}
+
+.sidebar .sidebar-brand p,
+.sidebar .nav-item,
+.sidebar .profile-copy small {
+  color: var(--sidebar-muted);
+}
+
+.sidebar .nav-item:disabled {
+  color: var(--sidebar-muted);
+  opacity: 1;
+}
+
+.sidebar .nav-item.active {
+  color: var(--sidebar-active-text);
+  background: var(--sidebar-active);
+}
+
+.sidebar .nav-item.active::before {
+  background: var(--symbol);
+}
+
+.sidebar-collapse {
+  color: var(--sidebar-text);
+  background: var(--collapse-background);
+  border-color: var(--collapse-border);
+}
+
+.workspace-card,
+.earnings-card,
+.profile-card,
+.settings-card,
+.theme-panel {
+  background: var(--surface);
+  border-color: var(--line);
+}
+
+.workspace-card:hover,
+.earnings-card:hover,
+.profile-card:hover,
+.settings-card:hover {
+  background: var(--surface-hover);
+}
+
+
+/* sand & sage
+   signature: deep sage, warm clay and walnut ink
+*/
+
+.app-layout[data-theme="sand-sage"] {
+  --background: #9b8874;
+  --sidebar: #786653;
+
+  --surface: #dac7a9;
+  --surface-hover: #e1cfb3;
+
+  --ink: #3b2d24;
+  --muted: #705847;
+  --line: rgba(63, 47, 36, 0.25);
+
+  --accent: #3f756b;
+  --accent-secondary: #a65f43;
+  --accent-soft: #b9c6b6;
+
+  --progress: #557f70;
+  --slider: #a65f43;
+  --symbol: #4f8074;
+  --number: #8d523d;
+
+  --button: #3f756b;
+  --button-hover: #315f57;
+  --button-text: #eadfca;
+
+  --sidebar-text: #392b22;
+  --sidebar-muted: #584536;
+  --sidebar-active: #ddcbae;
+  --sidebar-active-text: #493327;
+
+  --collapse-background: #ddcbae;
+  --collapse-border: #8a765f;
+  --banner-text: #3b2d24;
+  --banner-muted: #705847;
+
+  --brown: var(--ink);
+  --brown-soft: var(--muted);
+  --teal: var(--accent);
+  --teal-dark: var(--button-hover);
+  --sage: var(--accent-soft);
+}
+
+
+/* woodland hush
+   signature: moss green, fern and woodland amber
+*/
+
+.app-layout[data-theme="woodland-hush"] {
+  --background: #536056;
+  --sidebar: #344239;
+
+  --surface: #b5b39a;
+  --surface-hover: #c0bea5;
+
+  --ink: #263426;
+  --muted: #4c5b49;
+  --line: rgba(22, 34, 23, 0.28);
+
+  --accent: #587743;
+  --accent-secondary: #c18d3c;
+  --accent-soft: #929d78;
+
+  --progress: #66834e;
+  --slider: #c18d3c;
+  --symbol: #78975b;
+  --number: #a16f2d;
+
+  --button: #4f703d;
+  --button-hover: #3d592f;
+  --button-text: #e3ddbd;
+
+  --sidebar-text: #d6dbc0;
+  --sidebar-muted: #c2cab2;
+  --sidebar-active: #66745f;
+  --sidebar-active-text: #e6e0bf;
+
+  --collapse-background: #d8cfad;
+  --collapse-border: #6c795e;
+  --banner-text: #d6dbc0;
+  --banner-muted: #aeb89d;
+
+  --brown: var(--ink);
+  --brown-soft: var(--muted);
+  --teal: var(--accent);
+  --teal-dark: var(--button-hover);
+  --sage: var(--accent-soft);
+}
+
+/* moonlit tide
+   signature: moon cyan, deep marine blue and periwinkle
+*/
+
+.app-layout[data-theme="moonlit-tide"] {
+  --background: #334e5b;
+  --sidebar: #203641;
+
+  --surface: #aab9ba;
+  --surface-hover: #b7c4c3;
+
+  --ink: #243d46;
+  --muted: #49636a;
+  --line: rgba(17, 38, 45, 0.27);
+
+  --accent: #2e8191;
+  --accent-secondary: #6f75ba;
+  --accent-soft: #779da5;
+
+  --progress: #337f91;
+  --slider: #6f75ba;
+  --symbol: #3d91a1;
+  --number: #6268a2;
+
+  --button: #286f80;
+  --button-hover: #205968;
+  --button-text: #d5e7e4;
+
+  --sidebar-text: #c3deda;
+  --sidebar-muted: #acd1d4;
+  --sidebar-active: #345563;
+  --sidebar-active-text: #d4e7e4;
+
+  --collapse-background: #b9c8c7;
+  --collapse-border: #557580;
+  --banner-text: #c3deda;
+  --banner-muted: #94b8ba;
+
+  --brown: var(--ink);
+  --brown-soft: var(--muted);
+  --teal: var(--accent);
+  --teal-dark: var(--button-hover);
+  --sage: var(--accent-soft);
+}
+
+/* rainy window
+   signature: storm blue, smoky mauve and rainwater grey
+*/
+
+.app-layout[data-theme="rainy-window"] {
+  --background: #849699;
+  --sidebar: #667b7e;
+
+  --surface: #c7cfcc;
+  --surface-hover: #d0d7d4;
+
+  --ink: #2d4449;
+  --muted: #5a6b6f;
+  --line: rgba(40, 61, 65, 0.26);
+
+  --accent: #456d76;
+  --accent-secondary: #71868b;
+  --accent-soft: #aabbbc;
+
+  --progress: #70878b;
+  --slider: #527786;
+  --symbol: #607b82;
+  --number: #315f70;
+
+  --button: #496f77;
+  --button-hover: #385a61;
+  --button-text: #dce5e1;
+
+  --sidebar-text: #263f43;
+  --sidebar-muted: #3d565a;
+  --sidebar-active: #afbfbd;
+  --sidebar-active-text: #30484c;
+
+  --collapse-background: #c7cfcc;
+  --collapse-border: #667f83;
+  --banner-text: #2d4449;
+  --banner-muted: #587078;
+
+  --brown: var(--ink);
+  --brown-soft: var(--muted);
+  --teal: var(--accent);
+  --teal-dark: var(--button-hover);
+  --sage: var(--accent-soft);
+}
+
+
+/* coastal stone
+   signature: sea glass, mineral blue and soft coral
+*/
+
+.app-layout[data-theme="coastal-stone"] {
+  --background: #80a2a3;
+  --sidebar: #5e8082;
+
+  --surface: #d5d2c3;
+  --surface-hover: #dfdccd;
+
+  --ink: #285158;
+  --muted: #567278;
+  --line: rgba(29, 66, 73, 0.25);
+
+  --accent: #4f8178;
+  --accent-secondary: #765f4d;
+  --accent-soft: #b2cbc1;
+
+  --progress: #5f9084;
+  --slider: #765f4d;
+  --symbol: #729a8c;
+  --number: #6d5546;
+
+  --button: #277b82;
+  --button-hover: #1e6268;
+  --button-text: #e4e1d5;
+
+  --sidebar-text: #23494f;
+  --sidebar-muted: #365b60;
+  --sidebar-active: #b9cfca;
+  --sidebar-active-text: #2a5055;
+
+  --collapse-background: #d5d2c3;
+  --collapse-border: #547d80;
+  --banner-text: #285158;
+  --banner-muted: #607a73;
+
+  --brown: var(--ink);
+  --brown-soft: var(--muted);
+  --teal: var(--accent);
+  --teal-dark: var(--button-hover);
+  --sage: var(--accent-soft);
+}
+
+
+/* midnight studio
+   signature: warm charcoal, deep eucalyptus,
+   smoked walnut, slate and moon silver
+*/
+
+.app-layout[data-theme="midnight-studio"] {
+  --background: #3f403d;
+  --sidebar: #292b28;
+
+  --surface: #505953;
+  --surface-hover: #5b665f;
+
+  --ink: #aaa7b4;
+  --muted: #898b94;
+  --line: rgba(213, 214, 209, 0.2);
+
+  --accent: #769184;
+  --accent-secondary: #86654d;
+  --accent-soft: #68716c;
+
+  --progress: #789487;
+  --slider: #9a7457;
+  --symbol: #9993a7;
+  --number: #b4a9c4;
+
+  --button: #617d70;
+  --button-hover: #779487;
+  --button-text: #c4c0cd;
+
+  --sidebar-text: #aaa7b3;
+  --sidebar-muted: #858990;
+  --sidebar-active: #444b46;
+  --sidebar-active-text: #b7b1c2;
+
+  --collapse-background: #555d58;
+  --collapse-border: #737b75;
+  --banner-text: #b6b0c1;
+  --banner-muted: #92949c;
+
+  --brown: var(--ink);
+  --brown-soft: var(--muted);
+  --teal: var(--accent);
+  --teal-dark: var(--button-hover);
+  --sage: var(--accent-soft);
+}
+
+.app-layout[data-theme="midnight-studio"] .workspace-card,
+.app-layout[data-theme="midnight-studio"] .earnings-card,
+.app-layout[data-theme="midnight-studio"] .profile-card,
+.app-layout[data-theme="midnight-studio"] .settings-card,
+.app-layout[data-theme="midnight-studio"] .theme-panel {
+  box-shadow: 0 18px 38px rgba(4, 5, 11, 0.34);
+}
+
+.app-layout[data-theme="midnight-studio"]
+  .workspace-banner-shade {
+  background: none;
+}
+
+.theme-option[data-theme-option="midnight-studio"] {
+  --preview-text: #b6b0c1;
+  --preview-muted: #92949c;
+  --preview-accent: #769184;
+  --preview-button-text: #c7c2cf;
+  --preview-overlay: none;
+}
+
+
+/* paper & ink
+   signature: cool paper, graphite, blue-black ink
+   and sealing-wax burgundy
+*/
+
+.app-layout[data-theme="paper-ink"] {
+  --background: #8c8d8a;
+  --sidebar: #575a59;
+
+  --surface: #deddd7;
+  --surface-hover: #e9e8e2;
+
+  --ink: #283943;
+  --muted: #5b686e;
+  --line: rgba(32, 37, 41, 0.25);
+
+  --accent: #8a6b35;
+  --accent-secondary: #b08d48;
+  --accent-soft: #cbc2ad;
+
+  --progress: #b08d48;
+  --slider: #7e6333;
+  --symbol: #99783b;
+  --number: #74582b;
+
+  --button: #81632f;
+  --button-hover: #6d5228;
+  --button-text: #e5e4de;
+
+  --sidebar-text: #dfe1dd;
+  --sidebar-muted: #c5c9c6;
+  --sidebar-active: #747a78;
+  --sidebar-active-text: #e7e9e5;
+
+  --collapse-background: #d6d7d2;
+  --collapse-border: #737a7b;
+  --banner-text: #283943;
+  --banner-muted: #806735;
+  --banner-overlay: linear-gradient(
+    90deg,
+    rgba(222, 221, 215, 0.94),
+    rgba(222, 221, 215, 0.32) 56%,
+    transparent 84%
+  );
+
+  --brown: var(--ink);
+  --brown-soft: var(--muted);
+  --teal: var(--accent);
+  --teal-dark: var(--button-hover);
+  --sage: var(--accent-soft);
+}
+
+.theme-option[data-theme-option="paper-ink"] {
+  --preview-text: #283943;
+  --preview-muted: #4e585d;
+  --preview-accent: #9a783b;
+  --preview-button-text: #e5e4de;
+  --preview-overlay: linear-gradient(
+    0deg,
+    rgba(222, 221, 215, 0.96),
+    rgba(222, 221, 215, 0.12) 72%,
+    transparent
+  );
+}
+
+
+/* quiet meadow
+   signature: meadow green, butter gold and soft olive
+*/
+
+.app-layout[data-theme="quiet-meadow"] {
+  --background: #aab49a;
+  --sidebar: #87947a;
+
+  --surface: #e1debc;
+  --surface-hover: #e9e5c8;
+
+  --ink: #3b4d31;
+  --muted: #647258;
+  --line: rgba(63, 82, 49, 0.25);
+
+  --accent: #66834e;
+  --accent-secondary: #b28a35;
+  --accent-soft: #bdc8a2;
+
+  --progress: #78985b;
+  --slider: #b28a35;
+  --symbol: #9a762b;
+  --number: #7c6426;
+
+  --button: #607d49;
+  --button-hover: #4d673a;
+  --button-text: #e9e2c2;
+
+  --sidebar-text: #33462a;
+  --sidebar-muted: #4f6046;
+  --sidebar-active: #cbd0aa;
+  --sidebar-active-text: #405236;
+
+  --collapse-background: #e1debc;
+  --collapse-border: #84916d;
+  --banner-text: #3b4d31;
+  --banner-muted: #6b765e;
+
+  --brown: var(--ink);
+  --brown-soft: var(--muted);
+  --teal: var(--accent);
+  --teal-dark: var(--button-hover);
+  --sage: var(--accent-soft);
+}

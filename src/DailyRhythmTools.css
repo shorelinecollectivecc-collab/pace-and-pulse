@@ -1,0 +1,1374 @@
+.daily-tools-grid {
+  width: 100%;
+  margin-top: 10px;
+  display: grid;
+  grid-template-columns:
+    minmax(260px, 0.78fr)
+    minmax(300px, 0.9fr)
+    minmax(620px, 1.55fr);
+  grid-template-rows: 240px auto;
+  gap: 12px;
+}
+
+.daily-tool-card {
+  min-width: 0;
+  height: 100%;
+  padding: 12px 15px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 17px;
+  color: var(--ink);
+  background: var(--surface);
+  box-shadow: 0 10px 24px rgba(15, 15, 14, 0.15);
+}
+
+.timer-card {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.small-plan-card {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+.check-in-card {
+  grid-column: 3;
+  grid-row: 1;
+  padding-bottom: 16px;
+}
+
+.routine-card {
+  grid-column: 1 / -1;
+  grid-row: 2;
+  height: auto;
+  min-height: 320px;
+  padding: 16px 20px 20px;
+}
+
+.daily-tool-heading {
+  min-height: 42px;
+  padding-bottom: 7px;
+  border-bottom: 1px solid var(--line);
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.daily-tool-heading p,
+.daily-tool-heading h3 {
+  margin: 0;
+}
+
+.daily-tool-heading p {
+  color: var(--accent);
+  font-family: "Patrick Hand", sans-serif;
+  font-size: 0.76rem;
+}
+
+.daily-tool-heading h3 {
+  margin-top: -2px;
+  color: var(--ink);
+  font-family: var(--display-font);
+  font-size: 1.23rem;
+  font-weight: 400;
+  line-height: 1;
+}
+
+.daily-tool-heading > span {
+  margin-top: 4px;
+  color: var(--muted);
+  font-family: "Patrick Hand", sans-serif;
+  font-size: 0.66rem;
+}
+
+.timer-presets {
+  margin-top: 7px;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 5px;
+}
+
+.timer-presets button {
+  min-width: 0;
+  min-height: 30px;
+  padding: 5px 4px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 7px;
+  color: var(--muted);
+  background: transparent;
+  font-family: "Patrick Hand", sans-serif;
+  font-size: 0.63rem;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.timer-presets button:hover,
+.timer-presets .preset-selected {
+  color: var(--button-text);
+  border-color: var(--accent);
+  background: var(--accent);
+}
+
+.timer-display {
+  display: block;
+  margin: 7px 0 3px;
+  color: var(--number);
+  font-family: "Patrick Hand", sans-serif;
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 1;
+  text-align: center;
+}
+
+.mini-progress-track {
+  width: 100%;
+  height: 4px;
+  overflow: hidden;
+  border-radius: 999px;
+  background: var(--accent-soft);
+}
+
+.mini-progress-fill {
+  height: 100%;
+  border-radius: inherit;
+  background: var(--progress);
+  transition: width 250ms linear;
+}
+
+.timer-actions {
+  margin-top: 6px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 7px;
+}
+
+.timer-actions button {
+  width: 100%;
+  min-width: 0;
+  min-height: 32px;
+  padding: 5px 10px;
+  border-radius: 8px;
+  font-family: "Patrick Hand", sans-serif;
+  font-size: 0.73rem;
+  cursor: pointer;
+}
+
+.timer-main-button {
+  border: 1px solid var(--button);
+  color: var(--button-text);
+  background: var(--button);
+}
+
+.timer-reset-button {
+  border: 1px solid var(--line);
+  color: var(--accent);
+  background: transparent;
+}
+
+.small-plan-list {
+  margin-top: 8px;
+  display: grid;
+  gap: 5px;
+}
+
+.small-plan-row {
+  display: grid;
+  grid-template-columns: 25px minmax(0, 1fr);
+  gap: 7px;
+  align-items: center;
+}
+
+.small-plan-row button {
+  width: 25px;
+  height: 25px;
+  padding: 0;
+  border: 1px solid var(--accent);
+  border-radius: 7px;
+  display: grid;
+  place-items: center;
+  color: var(--button-text);
+  background: transparent;
+  font-family: "Patrick Hand", sans-serif;
+  font-size: 0.8rem;
+  cursor: pointer;
+}
+
+.small-plan-row input {
+  min-width: 0;
+  height: 27px;
+  padding: 3px 8px;
+  border: 0;
+  border-bottom: 1px solid var(--line);
+  outline: none;
+  color: var(--ink);
+  background: transparent;
+  font-family: "Patrick Hand", sans-serif;
+  font-size: 0.8rem;
+}
+
+.small-plan-row input::placeholder {
+  color: var(--muted);
+  opacity: 0.72;
+}
+
+.small-plan-row input:focus {
+  border-bottom-color: var(--accent);
+}
+
+.small-plan-row-done button {
+  background: var(--accent);
+}
+
+.small-plan-row-done input {
+  color: var(--muted);
+  text-decoration: line-through;
+}
+
+.mood-section > p,
+.energy-question {
+  margin: 5px 0 2px;
+  color: var(--muted);
+  font-family: "Patrick Hand", sans-serif;
+  font-size: 0.65rem;
+}
+
+.mood-options {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: 2px;
+}
+
+.mood-option {
+  position: relative;
+  min-width: 0;
+  aspect-ratio: 1;
+  padding: 0;
+  overflow: visible;
+  border: 0;
+  border-radius: 50%;
+  outline: none;
+  background: none;
+  cursor: pointer;
+}
+
+.mood-option img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 50%;
+  clip-path: circle(43.5% at 50% 50%);
+  transform: scale(1.14);
+}
+
+.mood-option:hover {
+  background: var(--accent-soft);
+}
+
+.mood-option-selected {
+  background: var(--accent-soft);
+  box-shadow:
+    0 0 0 2px var(--surface),
+    0 0 0 3px var(--symbol);
+}
+
+.mood-check {
+  position: absolute;
+  right: -1px;
+  bottom: -1px;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  color: var(--button-text);
+  background: var(--accent);
+  font-family: "Patrick Hand", sans-serif;
+  font-size: 0.56rem;
+}
+
+.check-in-bottom {
+  margin-top: 5px;
+  display: grid;
+  grid-template-columns:
+    minmax(190px, 0.88fr)
+    minmax(138px, 0.62fr)
+    minmax(280px, 1.45fr);
+  gap: 10px;
+  align-items: start;
+}
+
+.body-sliders {
+  display: grid;
+  gap: 5px;
+}
+
+.body-slider {
+  min-width: 0;
+  display: grid;
+}
+
+.slider-heading {
+  margin-bottom: 1px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  color: var(--muted);
+  font-family: "Patrick Hand", sans-serif;
+  font-size: 0.59rem;
+}
+
+.slider-heading output {
+  color: var(--accent);
+}
+
+.body-slider input[type="range"] {
+  width: 100%;
+  height: 12px;
+  margin: 0;
+  padding: 0;
+  appearance: none;
+  -webkit-appearance: none;
+  outline: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+.body-slider input[type="range"]::-webkit-slider-runnable-track {
+  height: 3px;
+  border-radius: 999px;
+  background: var(--accent-soft);
+}
+
+.body-slider input[type="range"]::-webkit-slider-thumb {
+  width: 12px;
+  height: 12px;
+  margin-top: -4.5px;
+  border: 2px solid var(--surface);
+  border-radius: 50%;
+  appearance: none;
+  -webkit-appearance: none;
+  background: var(--symbol);
+  box-shadow: 0 0 0 1px var(--accent);
+}
+
+.body-slider input[type="range"]::-moz-range-track {
+  height: 3px;
+  border: 0;
+  border-radius: 999px;
+  background: var(--accent-soft);
+}
+
+.body-slider input[type="range"]::-moz-range-progress {
+  height: 3px;
+  border-radius: 999px;
+  background: var(--progress);
+}
+
+.body-slider input[type="range"]::-moz-range-thumb {
+  width: 10px;
+  height: 10px;
+  border: 2px solid var(--surface);
+  border-radius: 50%;
+  background: var(--symbol);
+  box-shadow: 0 0 0 1px var(--accent);
+}
+
+.slider-markers {
+  min-height: 10px;
+  margin-top: 1px;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  align-items: center;
+  color: var(--muted);
+  font-family: "Patrick Hand", sans-serif;
+  font-size: 0.49rem;
+  line-height: 1.15;
+  text-align: center;
+}
+
+.slider-markers i {
+  width: 3px;
+  height: 3px;
+  margin: auto;
+  border-radius: 50%;
+  background: var(--symbol);
+  opacity: 0.72;
+}
+
+.temperature-slider {
+  margin-top: 2px;
+  padding-top: 4px;
+  border-top: 1px solid var(--line);
+}
+
+.thermometer-row {
+  min-width: 0;
+  display: grid;
+  grid-template-columns: 11px minmax(0, 1fr);
+  align-items: center;
+  gap: 4px;
+}
+
+.thermometer-icon {
+  position: relative;
+  width: 5px;
+  height: 16px;
+  margin-left: 2px;
+  border: 1px solid var(--accent);
+  border-radius: 999px 999px 3px 3px;
+}
+
+.thermometer-icon::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -3px;
+  width: 8px;
+  height: 8px;
+  border: 1px solid var(--accent);
+  border-radius: 50%;
+  background: var(--surface);
+  transform: translateX(-50%);
+}
+
+.thermometer-icon i {
+  position: absolute;
+  left: 1px;
+  right: 1px;
+  bottom: 1px;
+  height: 55%;
+  border-radius: 999px;
+  background: var(--progress);
+}
+
+.body-counters {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 10px;
+}
+
+.body-counter {
+  display: grid;
+  justify-items: center;
+}
+
+.body-counter p,
+.movement-heading p {
+  margin: 0 0 2px;
+  color: var(--muted);
+  font-family: "Patrick Hand", sans-serif;
+  font-size: 0.63rem;
+}
+
+.body-counter > span {
+  margin-top: 1px;
+  color: var(--muted);
+  font-family: "Patrick Hand", sans-serif;
+  font-size: 0.52rem;
+}
+
+.counter-circle {
+  width: 52px;
+  height: 52px;
+  padding: 4px;
+  border: 1px solid var(--symbol);
+  border-radius: 50%;
+  display: grid;
+  grid-template-columns: 13px 1fr 13px;
+  align-items: center;
+  color: var(--number);
+  background: var(--accent-soft);
+}
+
+.counter-circle button {
+  width: 13px;
+  height: 22px;
+  padding: 0;
+  border: 0;
+  outline: none;
+  color: var(--accent);
+  background: transparent;
+  font-family: "Patrick Hand", sans-serif;
+  font-size: 0.88rem;
+  cursor: pointer;
+}
+
+.counter-circle strong {
+  font-family: "Patrick Hand", sans-serif;
+  font-size: 1.35rem;
+  font-weight: 400;
+  line-height: 1;
+  text-align: center;
+}
+
+.movement-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.movement-heading > span,
+.movement-last {
+  color: var(--muted);
+  font-family: "Patrick Hand", sans-serif;
+  font-size: 0.55rem;
+}
+
+.movement-options {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 5px;
+}
+
+.movement-options button {
+  min-width: 0;
+  min-height: 28px;
+  padding: 5px 7px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  color: var(--muted);
+  background: transparent;
+  font-family: "Patrick Hand", sans-serif;
+  font-size: 0.68rem;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.movement-options button:hover {
+  color: var(--button-text);
+  border-color: var(--accent);
+  background: var(--accent);
+}
+
+.movement-last {
+  min-height: 16px;
+  margin-top: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 6px;
+}
+
+.movement-last button {
+  padding: 0;
+  border: 0;
+  color: var(--accent);
+  background: transparent;
+  font-family: "Patrick Hand", sans-serif;
+  font-size: 0.55rem;
+  cursor: pointer;
+}
+
+.routine-card .daily-tool-heading {
+  min-height: 46px;
+  padding-bottom: 8px;
+}
+
+.routine-card .daily-tool-heading h3 {
+  font-size: 1.35rem;
+}
+
+.reward-strip {
+  margin-top: 10px;
+  padding: 9px 12px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  background: var(--accent-soft);
+}
+
+.reward-strip > div:first-child {
+  min-width: 0;
+  display: grid;
+}
+
+.reward-strip > div:first-child > span {
+  color: var(--accent);
+  font-family: "Patrick Hand", sans-serif;
+  font-size: 0.72rem;
+}
+
+.reward-strip > div:first-child > strong {
+  overflow: hidden;
+  color: var(--ink);
+  font-family: var(--display-font);
+  font-size: 1rem;
+  font-weight: 400;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.rhythm-points {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: baseline;
+  gap: 5px;
+  color: var(--number);
+}
+
+.rhythm-points strong {
+  font-family: "Patrick Hand", sans-serif;
+  font-size: 1.35rem;
+  font-weight: 400;
+}
+
+.rhythm-points span {
+  color: var(--muted);
+  font-family: "Patrick Hand", sans-serif;
+  font-size: 0.68rem;
+}
+
+.daily-milestones {
+  margin-top: 9px;
+}
+
+.milestone-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.milestone-heading p,
+.milestone-heading span {
+  margin: 0;
+  font-family: "Patrick Hand", sans-serif;
+}
+
+.milestone-heading p {
+  color: var(--accent);
+  font-size: 0.82rem;
+}
+
+.milestone-heading span {
+  color: var(--muted);
+  font-size: 0.66rem;
+}
+
+.milestone-list {
+  margin-top: 5px;
+  display: grid;
+  grid-template-columns: repeat(8, minmax(0, 1fr));
+  gap: 5px;
+}
+
+.milestone {
+  min-width: 0;
+  min-height: 70px;
+  padding: 5px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  display: grid;
+  grid-template-columns: 20px minmax(0, 1fr);
+  align-items: center;
+  gap: 4px;
+  opacity: 0.6;
+}
+
+.milestone > input {
+  grid-column: 1 / -1;
+  width: 100%;
+  min-width: 0;
+  height: 22px;
+  padding: 2px 5px;
+  border: 1px solid var(--line);
+  border-radius: 7px;
+  outline: none;
+  color: var(--ink);
+  background: color-mix(
+    in srgb,
+    var(--surface) 72%,
+    transparent
+  );
+  font-family: "Patrick Hand", sans-serif;
+  font-size: 0.57rem;
+}
+
+.milestone > input::placeholder {
+  color: var(--muted);
+  opacity: 0.72;
+}
+
+.milestone > input:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 2px var(--accent-soft);
+}
+
+.milestone > span {
+  width: 20px;
+  height: 20px;
+  border: 1px solid var(--symbol);
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  color: var(--number);
+  font-family: "Patrick Hand", sans-serif;
+  font-size: 0.62rem;
+}
+
+.milestone > div {
+  min-width: 0;
+  display: grid;
+}
+
+.milestone strong,
+.milestone small {
+  overflow: hidden;
+  font-family: "Patrick Hand", sans-serif;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.milestone strong {
+  color: var(--ink);
+  font-size: 0.61rem;
+  font-weight: 400;
+}
+
+.milestone small {
+  color: var(--muted);
+  font-size: 0.46rem;
+}
+
+.milestone-reached {
+  border-color: var(--accent);
+  background: color-mix(
+    in srgb,
+    var(--accent-soft) 78%,
+    var(--surface)
+  );
+  opacity: 1;
+}
+
+.milestone-reached > span {
+  color: var(--button-text);
+  border-color: var(--accent);
+  background: var(--accent);
+}
+
+.routine-layout {
+  margin-top: 14px;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  align-items: start;
+  gap: 18px;
+}
+
+.routine-column {
+  min-width: 0;
+}
+
+.routine-column h4 {
+  margin: 0 0 7px;
+  color: var(--accent);
+  font-family: "Patrick Hand", sans-serif;
+  font-size: 0.92rem;
+  font-weight: 400;
+}
+
+.routine-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 7px;
+}
+
+.routine-detail-row {
+  min-width: 0;
+  display: grid;
+  grid-template-columns:
+    minmax(102px, 0.78fr)
+    minmax(0, 1.22fr);
+  align-items: center;
+  gap: 7px;
+}
+
+.routine-detail-row > button {
+  min-width: 0;
+  min-height: 28px;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  display: grid;
+  grid-template-columns: 19px minmax(0, 1fr);
+  align-items: center;
+  gap: 7px;
+  color: var(--muted);
+  background: transparent;
+  font-family: "Patrick Hand", sans-serif;
+  font-size: 0.8rem;
+  text-align: left;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.routine-detail-row > button > span {
+  width: 18px;
+  height: 18px;
+  border: 1px solid var(--symbol);
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  color: var(--button-text);
+  font-size: 0.66rem;
+}
+
+.routine-detail-row > button.routine-item-done {
+  color: var(--ink);
+  text-decoration: line-through;
+}
+
+.routine-detail-row > button.routine-item-done > span {
+  background: var(--accent);
+}
+
+.routine-detail-row > input {
+  box-sizing: border-box;
+  appearance: none;
+  width: 100%;
+  min-width: 0;
+  height: 28px;
+  padding: 3px 7px;
+  border: 1px solid var(--line);
+  border-radius: 7px;
+  outline: none;
+  color: var(--ink);
+  background: var(--surface);
+  box-shadow: inset 0 0 0 999px rgba(255, 255, 255, 0.035);
+  font-family: "Patrick Hand", sans-serif;
+  font-size: 0.7rem;
+}
+
+.routine-detail-row > input::placeholder {
+  color: var(--muted);
+  opacity: 0.7;
+}
+
+.routine-detail-row > input:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 2px var(--accent-soft);
+}
+
+.routine-extras > p {
+  margin: -4px 0 8px;
+  color: var(--muted);
+  font-family: "Patrick Hand", sans-serif;
+  font-size: 0.68rem;
+}
+
+.optional-routine-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 7px;
+}
+
+.optional-routine-row {
+  min-width: 0;
+  display: grid;
+  grid-template-columns:
+    minmax(105px, 0.72fr)
+    minmax(0, 1.28fr);
+  align-items: center;
+  gap: 7px;
+}
+
+.optional-routine-row > button {
+  min-width: 0;
+  min-height: 28px;
+  padding: 2px 4px;
+  overflow: hidden;
+  border: 0;
+  display: grid;
+  grid-template-columns: 19px minmax(0, 1fr);
+  align-items: center;
+  gap: 6px;
+  color: var(--muted);
+  background: transparent;
+  font-family: "Patrick Hand", sans-serif;
+  font-size: 0.72rem;
+  text-align: left;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.optional-routine-row > button > span {
+  width: 18px;
+  height: 18px;
+  border: 1px solid var(--symbol);
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  color: var(--button-text);
+  font-size: 0.65rem;
+}
+
+.optional-routine-row > button.optional-selected {
+  color: var(--ink);
+}
+
+.optional-routine-row > button.optional-selected > span {
+  border-color: var(--accent);
+  background: var(--accent);
+}
+
+.optional-routine-row > input {
+  box-sizing: border-box;
+  appearance: none;
+  width: 100%;
+  min-width: 0;
+  height: 28px;
+  padding: 3px 7px;
+  border: 1px solid var(--line);
+  border-radius: 7px;
+  outline: none;
+  color: var(--ink);
+  background: var(--surface);
+  box-shadow: inset 0 0 0 999px rgba(255, 255, 255, 0.035);
+  font-family: "Patrick Hand", sans-serif;
+  font-size: 0.7rem;
+}
+
+.optional-routine-row > input::placeholder {
+  color: var(--muted);
+  opacity: 0.7;
+}
+
+.optional-routine-row > input:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 2px var(--accent-soft);
+}
+
+.extra-options {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 6px;
+}
+
+.extra-options button {
+  min-width: 0;
+  min-height: 27px;
+  padding: 4px 8px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  color: var(--muted);
+  background: transparent;
+  font-family: "Patrick Hand", sans-serif;
+  font-size: 0.7rem;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.extra-options button:hover,
+.extra-options .extra-active {
+  color: var(--button-text);
+  border-color: var(--accent);
+  background: var(--accent);
+}
+
+.extra-checklist {
+  margin-top: 8px;
+  grid-template-columns: 1fr;
+  gap: 7px;
+}
+
+.extra-detail-row {
+  min-width: 0;
+  display: grid;
+  grid-template-columns: minmax(110px, 0.42fr) minmax(160px, 1fr);
+  align-items: center;
+  gap: 8px;
+}
+
+.extra-detail-row input {
+  width: 100%;
+  min-width: 0;
+  height: 28px;
+  padding: 3px 8px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  outline: none;
+  color: var(--ink);
+  background: color-mix(
+    in srgb,
+    var(--surface) 72%,
+    transparent
+  );
+  font-family: "Patrick Hand", sans-serif;
+  font-size: 0.76rem;
+}
+
+.extra-detail-row input::placeholder {
+  color: var(--muted);
+  opacity: 0.72;
+}
+
+.extra-detail-row input:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 2px var(--accent-soft);
+}
+
+.main-content .workspace-banner,
+.main-content .dashboard-grid,
+.main-content .daily-tools-grid {
+  width: 100%;
+  max-width: none;
+}
+
+.main-content {
+  width: 100%;
+  height: 100dvh;
+  min-height: 0;
+  padding: 18px 17px 48px 24px;
+  overflow-y: scroll !important;
+  overflow-x: hidden;
+  scrollbar-width: thin;
+  scrollbar-color:
+    color-mix(in srgb, var(--accent) 72%, transparent)
+    transparent;
+  scrollbar-gutter: stable;
+  overscroll-behavior: contain;
+}
+
+.main-content::-webkit-scrollbar {
+  width: 8px;
+}
+
+.main-content::-webkit-scrollbar-track {
+  margin: 8px 0;
+  border-radius: 999px;
+  background:
+    color-mix(
+      in srgb,
+      var(--line) 24%,
+      transparent
+    );
+}
+
+.main-content::-webkit-scrollbar-thumb {
+  border: 2px solid transparent;
+  border-radius: 999px;
+  background:
+    color-mix(in srgb, var(--accent) 72%, transparent);
+  background-clip: padding-box;
+}
+
+.main-content::-webkit-scrollbar-thumb:hover {
+  background:
+    color-mix(in srgb, var(--symbol) 88%, transparent);
+  background-clip: padding-box;
+}
+
+.main-content .page-header {
+  min-height: 52px;
+  padding-bottom: 9px;
+}
+
+.main-content .page-header h2 {
+  font-size: 2.35rem;
+}
+
+.main-content .workspace-banner {
+  height: 82px;
+  margin-top: 10px;
+}
+
+.main-content .workspace-banner-copy {
+  bottom: 10px;
+}
+
+.main-content .dashboard-grid {
+  margin-top: 10px;
+  grid-template-columns:
+    minmax(0, 1.65fr)
+    minmax(330px, 0.9fr);
+  gap: 12px;
+}
+
+.main-content .progress-card,
+.main-content .earnings-card {
+  height: 240px;
+  padding: 15px 20px;
+}
+
+.main-content .card-heading {
+  min-height: 45px;
+  padding-bottom: 8px;
+}
+
+.main-content .count {
+  margin: 7px 0 5px;
+}
+
+.main-content .count strong {
+  font-size: 3.75rem;
+}
+
+.main-content .progress-message {
+  margin: 4px 0 6px;
+}
+
+.main-content .add-button {
+  min-height: 38px;
+}
+
+.main-content .earnings-value {
+  margin: 17px 0 14px;
+}
+
+.main-content .earnings-value strong {
+  font-size: 2.35rem;
+}
+
+.main-content .earnings-detail {
+  padding: 8px 0;
+}
+
+@media (max-width: 1350px) {
+  .daily-tools-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-rows: auto;
+  }
+
+  .timer-card,
+  .small-plan-card {
+    grid-column: auto;
+    grid-row: 1;
+    min-height: 205px;
+  }
+
+  .check-in-card,
+  .routine-card {
+    grid-column: 1 / -1;
+    grid-row: auto;
+    min-height: 205px;
+  }
+
+  .check-in-bottom {
+    grid-template-columns:
+      minmax(180px, 0.7fr)
+      minmax(160px, 0.6fr)
+      minmax(340px, 1.3fr);
+  }
+
+  .milestone-list {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .routine-layout {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 850px) {
+  .daily-tools-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .timer-card,
+  .small-plan-card,
+  .check-in-card,
+  .routine-card {
+    grid-column: 1;
+    grid-row: auto;
+    height: auto;
+  }
+
+  .mood-options {
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+  }
+
+  .check-in-bottom,
+  .routine-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .extra-detail-row {
+    grid-template-columns: 1fr;
+    gap: 4px;
+  }
+
+  .optional-routine-list {
+    grid-template-columns: 1fr;
+  }
+
+  .reward-strip {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .reward-strip > div:first-child > strong {
+    white-space: normal;
+  }
+
+  .milestone-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .routine-detail-row {
+    grid-template-columns:
+      minmax(110px, 0.7fr)
+      minmax(140px, 1.3fr);
+  }
+}
+
+
+/* work focus sessions inside morning / afternoon / evening */
+
+.work-focus-box {
+  margin: 6px 0 10px;
+  padding: 8px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: color-mix(
+    in srgb,
+    var(--accent-soft) 62%,
+    transparent
+  );
+}
+
+.work-focus-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.work-focus-heading > div {
+  min-width: 0;
+  display: flex;
+  align-items: baseline;
+  gap: 7px;
+  flex-wrap: wrap;
+}
+
+.work-focus-heading strong {
+  color: var(--ink);
+  font-family: "Patrick Hand", sans-serif;
+  font-size: 0.76rem;
+  font-weight: 400;
+}
+
+.work-focus-heading span {
+  color: var(--muted);
+  font-family: "Patrick Hand", sans-serif;
+  font-size: 0.58rem;
+}
+
+.work-focus-entry {
+  margin-top: 6px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 5px;
+}
+
+.work-focus-entry input {
+  min-width: 0;
+  height: 29px;
+  padding: 4px 7px;
+  border: 1px solid var(--line);
+  border-radius: 7px;
+  outline: none;
+  color: var(--ink);
+  background: color-mix(
+    in srgb,
+    var(--surface) 88%,
+    transparent
+  );
+  font-family: "Patrick Hand", sans-serif;
+  font-size: 0.68rem;
+}
+
+.work-focus-entry input:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 2px var(--accent-soft);
+}
+
+.work-focus-entry button,
+.work-session-log > button {
+  min-height: 29px;
+  padding: 4px 8px;
+  border: 1px solid var(--accent);
+  border-radius: 7px;
+  color: var(--button-text);
+  background: var(--button);
+  font-family: "Patrick Hand", sans-serif;
+  font-size: 0.65rem;
+  cursor: pointer;
+}
+
+.work-session-log {
+  margin-top: 6px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: end;
+  gap: 6px;
+}
+
+.work-session-chips {
+  min-width: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+.work-session-chips span {
+  padding: 2px 5px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  color: var(--muted);
+  background: var(--surface);
+  font-family: "Patrick Hand", sans-serif;
+  font-size: 0.55rem;
+  line-height: 1.2;
+}
+
+.work-session-log > button {
+  min-height: 22px;
+  padding: 2px 5px;
+  border-color: var(--line);
+  color: var(--accent);
+  background: transparent;
+  font-size: 0.55rem;
+}
+
+.routine-detail-row-simple {
+  grid-template-columns: 1fr !important;
+}
+
+.routine-detail-row-simple > button {
+  width: 100%;
+}
+
+/* keep the three main day columns comfortable with the added focus tracker */
+.routine-layout {
+  align-items: start;
+}
+
+@media (max-width: 1100px) {
+  .work-focus-entry,
+  .work-session-log {
+    grid-template-columns: 1fr;
+  }
+
+  .work-focus-entry button,
+  .work-session-log > button {
+    width: 100%;
+  }
+}

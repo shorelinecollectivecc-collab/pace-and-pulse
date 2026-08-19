@@ -1,0 +1,264 @@
+@import url("https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400&family=Architects+Daughter&family=Bad+Script&family=Caveat:wght@400&family=Coming+Soon&family=Gloria+Hallelujah&family=Just+Another+Hand&family=Kalam:wght@400&family=Neucha&family=Noto+Sans+Arabic:wght@400&family=Noto+Sans+Devanagari:wght@400&family=Noto+Sans+Hebrew:wght@400&family=Noto+Sans+JP:wght@400&family=Noto+Sans+KR:wght@400&family=Noto+Sans+SC:wght@400&family=Noto+Sans+TC:wght@400&family=Noto+Sans+Thai:wght@400&family=Pangolin&family=Patrick+Hand&family=Schoolbell&family=Shadows+Into+Light&family=Sue+Ellen+Francisco&display=swap");
+
+:root {
+  --display-font: "Shadows Into Light", cursive;
+  --workspace-font:
+    "Shadows Into Light",
+    "Bad Script",
+    "Kalam",
+    "Noto Sans Arabic",
+    "Noto Sans Hebrew",
+    "Noto Sans Devanagari",
+    "Noto Sans Thai",
+    "Noto Sans JP",
+    "Noto Sans KR",
+    "Noto Sans SC",
+    "Noto Sans TC",
+    sans-serif;
+  --brand-title-size: 1.82rem;
+  font-family: var(--workspace-font);
+  color: #2f2924;
+  background: #9b8a77;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html,
+body,
+#root {
+  width: 100%;
+  min-width: 320px;
+  min-height: 100%;
+  margin: 0;
+}
+
+html {
+  font-size: 16px;
+  text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  min-height: 100vh;
+  background: #9b8a77;
+  overscroll-behavior: none;
+}
+
+.app-layout[data-font="shadows-into-light"] {
+  --workspace-font:
+    "Shadows Into Light",
+    "Bad Script",
+    "Kalam",
+    "Noto Sans Arabic",
+    "Noto Sans Hebrew",
+    "Noto Sans Devanagari",
+    "Noto Sans Thai",
+    "Noto Sans JP",
+    "Noto Sans KR",
+    "Noto Sans SC",
+    "Noto Sans TC",
+    sans-serif;
+  --brand-title-size: 1.82rem;
+}
+
+.app-layout[data-font="coming-soon"] {
+  --workspace-font:
+    "Coming Soon",
+    "Neucha",
+    "Kalam",
+    "Noto Sans Arabic",
+    "Noto Sans Hebrew",
+    "Noto Sans Devanagari",
+    "Noto Sans Thai",
+    "Noto Sans JP",
+    "Noto Sans KR",
+    "Noto Sans SC",
+    "Noto Sans TC",
+    sans-serif;
+  --brand-title-size: 1.68rem;
+}
+
+.app-layout[data-font="patrick-hand"] {
+  --workspace-font:
+    "Patrick Hand",
+    "Pangolin",
+    "Kalam",
+    "Noto Sans Arabic",
+    "Noto Sans Hebrew",
+    "Noto Sans Devanagari",
+    "Noto Sans Thai",
+    "Noto Sans JP",
+    "Noto Sans KR",
+    "Noto Sans SC",
+    "Noto Sans TC",
+    sans-serif;
+  --brand-title-size: 1.88rem;
+}
+
+.app-layout[data-font="schoolbell"] {
+  --workspace-font:
+    "Schoolbell",
+    "Neucha",
+    "Kalam",
+    "Noto Sans Arabic",
+    "Noto Sans Hebrew",
+    "Noto Sans Devanagari",
+    "Noto Sans Thai",
+    "Noto Sans JP",
+    "Noto Sans KR",
+    "Noto Sans SC",
+    "Noto Sans TC",
+    sans-serif;
+  --brand-title-size: 1.76rem;
+}
+
+.app-layout[data-font="sue-ellen-francisco"] {
+  --workspace-font:
+    "Sue Ellen Francisco",
+    "Amatic SC",
+    "Kalam",
+    "Noto Sans Arabic",
+    "Noto Sans Hebrew",
+    "Noto Sans Devanagari",
+    "Noto Sans Thai",
+    "Noto Sans JP",
+    "Noto Sans KR",
+    "Noto Sans SC",
+    "Noto Sans TC",
+    sans-serif;
+  --brand-title-size: 2rem;
+}
+
+.app-layout[data-font="gloria-hallelujah"] {
+  --workspace-font:
+    "Gloria Hallelujah",
+    "Caveat",
+    "Kalam",
+    "Noto Sans Arabic",
+    "Noto Sans Hebrew",
+    "Noto Sans Devanagari",
+    "Noto Sans Thai",
+    "Noto Sans JP",
+    "Noto Sans KR",
+    "Noto Sans SC",
+    "Noto Sans TC",
+    sans-serif;
+  --brand-title-size: 1.48rem;
+}
+
+.app-layout[data-font="architects-daughter"] {
+  --workspace-font:
+    "Architects Daughter",
+    "Pangolin",
+    "Kalam",
+    "Noto Sans Arabic",
+    "Noto Sans Hebrew",
+    "Noto Sans Devanagari",
+    "Noto Sans Thai",
+    "Noto Sans JP",
+    "Noto Sans KR",
+    "Noto Sans SC",
+    "Noto Sans TC",
+    sans-serif;
+  --brand-title-size: 1.55rem;
+}
+
+.app-layout[data-font="just-another-hand"] {
+  --workspace-font:
+    "Just Another Hand",
+    "Bad Script",
+    "Kalam",
+    "Noto Sans Arabic",
+    "Noto Sans Hebrew",
+    "Noto Sans Devanagari",
+    "Noto Sans Thai",
+    "Noto Sans JP",
+    "Noto Sans KR",
+    "Noto Sans SC",
+    "Noto Sans TC",
+    sans-serif;
+  --brand-title-size: 2.05rem;
+}
+
+.app-layout,
+.app-layout button,
+.app-layout input,
+.app-layout textarea,
+.app-layout select,
+.app-layout option,
+.app-layout output {
+  font-family: var(--workspace-font) !important;
+}
+
+.app-layout .sidebar-brand h1 {
+  width: 100%;
+  max-width: 100%;
+  overflow: visible;
+  font-family: var(--workspace-font) !important;
+  font-size: var(--brand-title-size) !important;
+  letter-spacing: -0.035em;
+  white-space: nowrap;
+}
+
+html:lang(ru),
+html:lang(uk),
+html:lang(bg),
+html:lang(be),
+html:lang(mk),
+html:lang(sr),
+html:lang(kk),
+html:lang(ky),
+html:lang(mn),
+html:lang(tg) {
+  font-size: 14px;
+}
+
+html:lang(de),
+html:lang(nl),
+html:lang(da),
+html:lang(no),
+html:lang(sv),
+html:lang(fi),
+html:lang(is),
+html:lang(pl),
+html:lang(cs),
+html:lang(sk),
+html:lang(hu),
+html:lang(ro),
+html:lang(tr),
+html:lang(el),
+html:lang(fr),
+html:lang(es),
+html:lang(pt),
+html:lang(it),
+html:lang(ca) {
+  font-size: 15px;
+}
+
+html:lang(ar),
+html:lang(fa),
+html:lang(ur),
+html:lang(he),
+html:lang(ps),
+html:lang(hi),
+html:lang(bn),
+html:lang(pa),
+html:lang(gu),
+html:lang(mr),
+html:lang(ta),
+html:lang(te),
+html:lang(kn),
+html:lang(ml),
+html:lang(ne),
+html:lang(si),
+html:lang(th),
+html:lang(lo),
+html:lang(km),
+html:lang(my),
+html:lang(zh),
+html:lang(ja),
+html:lang(ko) {
+  font-size: 15px;
+}

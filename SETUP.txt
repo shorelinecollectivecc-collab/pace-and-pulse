@@ -1,0 +1,31 @@
+PACE & PULSE — ONBOARDING CORRECTIONS
+
+This update fixes all three issues:
+
+1. Profile picture is now a real image upload.
+2. Annotation platform starts empty and no longer suggests Spotify.
+3. Currency, font, clock and date menus are custom Pace & Pulse dropdowns,
+   not the browser's generic blue dropdown.
+
+INSTALL
+
+1. Replace these complete files:
+   src/WelcomeOverlay.tsx
+   src/WelcomeOverlay.css
+
+2. Open Supabase > SQL Editor > New query.
+
+3. Paste and run:
+   supabase-profile-picture-fix.sql
+
+4. A result saying "Success. No rows returned" is correct.
+
+5. Restart:
+   Ctrl + C
+   npm run dev
+
+6. Test onboarding again.
+
+The SQL creates a public profile-pictures Storage bucket, limits uploads to
+PNG/JPG/WebP files up to 5 MB, and only lets each signed-in user change files
+inside their own user folder.

@@ -1,0 +1,16 @@
+pace & pulse · refactor step 2
+
+replace your current src folder with the src folder in this zip.
+
+completed in this step:
+- app.tsx reduced from 1,129 lines to 532 lines
+- sidebar and profile menu extracted into components/layout/AppSidebar.tsx
+- annotation form modal extracted into components/annotations/AnnotationModal.tsx
+- daily dashboard extracted into components/pages/DailyDashboard.tsx
+- themes, fonts and settings page extracted into components/pages/PersonalisationPage.tsx
+- reusable workspace banner extracted into components/layout/WorkspaceBanner.tsx
+- navigation behavior, visuals, state and existing page components preserved
+
+validation:
+- all changed tsx files passed typescript syntax/transpile validation
+- no css files were changed

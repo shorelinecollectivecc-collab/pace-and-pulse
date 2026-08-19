@@ -1,0 +1,472 @@
+.little-wins-page {
+  width: 100%;
+  height: 100%;
+  padding: 0 5px 30px 0;
+  overflow-y: auto;
+  color: var(--ink);
+  scrollbar-width: thin;
+  scrollbar-color: var(--accent) transparent;
+}
+
+.little-wins-page::-webkit-scrollbar {
+  width: 7px;
+}
+
+.little-wins-page::-webkit-scrollbar-thumb {
+  border-radius: 999px;
+  background: var(--accent);
+}
+
+.little-wins-heading {
+  min-height: 64px;
+  padding: 2px 4px 12px;
+  border-bottom: 1px solid var(--line);
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 18px;
+}
+
+.little-wins-heading p,
+.little-wins-heading h2,
+.wins-hero-card p,
+.wins-hero-card h3,
+.wins-section-heading p,
+.wins-section-heading h3 {
+  margin: 0;
+}
+
+.little-wins-heading p,
+.wins-hero-card > div p,
+.wins-section-heading p {
+  color: var(--accent);
+  font-family: "Patrick Hand", sans-serif;
+}
+
+.little-wins-heading p {
+  font-size: 0.86rem;
+}
+
+.little-wins-heading h2 {
+  color: var(--ink);
+  font-family: var(--display-font);
+  font-size: 2.25rem;
+  font-weight: 400;
+  line-height: 1;
+}
+
+.little-wins-heading > span {
+  margin-top: 13px;
+  color: var(--muted);
+  font-family: "Patrick Hand", sans-serif;
+  font-size: 0.8rem;
+}
+
+.wins-summary {
+  margin-top: 12px;
+  display: grid;
+  grid-template-columns: minmax(280px, 0.75fr) minmax(0, 1.25fr);
+  gap: 12px;
+}
+
+.wins-hero-card,
+.wins-stat-grid article,
+.wins-week-card,
+.wins-proud-card,
+.wins-path-card {
+  min-width: 0;
+  border: 1px solid var(--line);
+  border-radius: 17px;
+  color: var(--ink);
+  background: var(--surface);
+  box-shadow: 0 10px 24px rgba(15, 15, 14, 0.13);
+}
+
+.wins-hero-card {
+  min-height: 190px;
+  padding: 17px 19px;
+  text-align: center;
+}
+
+.wins-hero-card > div {
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--line);
+  text-align: left;
+}
+
+.wins-hero-card > div p,
+.wins-section-heading p {
+  font-size: 0.74rem;
+}
+
+.wins-hero-card h3,
+.wins-section-heading h3 {
+  color: var(--ink);
+  font-family: var(--display-font);
+  font-size: 1.45rem;
+  font-weight: 400;
+  line-height: 1;
+}
+
+.wins-project-points {
+  margin-top: 10px;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.wins-project-points > div {
+  min-width: 0;
+  padding: 4px 8px;
+}
+
+.wins-project-points > div + div {
+  border-left: 1px solid var(--line);
+}
+
+.wins-project-points strong,
+.wins-project-points span {
+  display: block;
+  font-family: "Patrick Hand", sans-serif;
+}
+
+.wins-project-points strong {
+  color: var(--number);
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 1;
+}
+
+.wins-project-points span {
+  color: var(--muted);
+  font-size: 0.7rem;
+}
+
+.wins-hero-message {
+  margin-top: 7px !important;
+  color: var(--accent);
+  font-family: var(--display-font);
+  font-size: 1rem;
+}
+
+.wins-stat-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.wins-stat-grid article {
+  min-height: 90px;
+  padding: 12px 14px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.wins-stat-grid span,
+.wins-stat-grid strong,
+.wins-stat-grid small {
+  display: block;
+  font-family: "Patrick Hand", sans-serif;
+}
+
+.wins-stat-grid span,
+.wins-stat-grid small {
+  color: var(--muted);
+}
+
+.wins-stat-grid span {
+  font-size: 0.7rem;
+}
+
+.wins-stat-grid strong {
+  color: var(--number);
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 1;
+}
+
+.wins-stat-grid small {
+  font-size: 0.62rem;
+}
+
+.wins-middle-grid {
+  margin-top: 12px;
+  display: grid;
+  grid-template-columns: minmax(0, 1.25fr) minmax(340px, 0.75fr);
+  gap: 12px;
+}
+
+.wins-week-pair,
+.wins-project-paths {
+  margin-top: 12px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.wins-proud-wide {
+  margin-top: 12px;
+}
+
+.wins-proud-wide .wins-proud-list {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.wins-week-card,
+.wins-proud-card,
+.wins-path-card {
+  padding: 16px 18px;
+}
+
+.wins-section-heading {
+  min-height: 48px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--line);
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.wins-section-heading > span {
+  color: var(--muted);
+  font-family: "Patrick Hand", sans-serif;
+  font-size: 0.72rem;
+}
+
+.wins-week-days {
+  margin-top: 13px;
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  gap: 7px;
+}
+
+.wins-week-day {
+  min-width: 0;
+  min-height: 82px;
+  padding: 8px 4px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: color-mix(
+    in srgb,
+    var(--surface-hover) 38%,
+    transparent
+  );
+}
+
+.wins-week-day span,
+.wins-week-day strong,
+.wins-week-day small {
+  display: block;
+  font-family: "Patrick Hand", sans-serif;
+}
+
+.wins-week-day span,
+.wins-week-day small {
+  color: var(--muted);
+  font-size: 0.62rem;
+}
+
+.wins-week-day strong {
+  color: var(--number);
+  font-size: 1.45rem;
+  font-weight: 400;
+  line-height: 1;
+}
+
+.wins-week-day-lit {
+  border-color: var(--tracker);
+  background: var(--accent-soft);
+}
+
+.wins-week-day-today {
+  box-shadow:
+    inset 0 0 0 1px var(--surface),
+    0 0 0 2px var(--accent);
+}
+
+.wins-proud-list {
+  margin-top: 13px;
+  display: grid;
+  gap: 9px;
+}
+
+.wins-proud-list label {
+  min-width: 0;
+  display: grid;
+  grid-template-columns: 30px minmax(0, 1fr);
+  align-items: center;
+  gap: 8px;
+}
+
+.wins-proud-list label > span {
+  width: 29px;
+  height: 29px;
+  border: 1px solid var(--symbol);
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  color: var(--symbol);
+  font-family: "Patrick Hand", sans-serif;
+  font-size: 0.8rem;
+}
+
+.wins-proud-list input {
+  width: 100%;
+  min-width: 0;
+  height: 39px;
+  padding: 6px 9px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  outline: none;
+  color: var(--ink);
+  background: transparent;
+  font-family: "Patrick Hand", sans-serif;
+  font-size: 0.84rem;
+}
+
+.wins-proud-list input:focus {
+  border-color: var(--accent);
+}
+
+.wins-proud-list input::placeholder {
+  color: var(--muted);
+  opacity: 0.7;
+}
+
+.wins-project-paths .wins-path-card {
+  margin-top: 0;
+}
+
+.wins-path {
+  margin-top: 13px;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 7px;
+}
+
+.wins-path-step {
+  min-width: 0;
+  min-height: 100px;
+  padding: 8px 5px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.wins-path-step > span {
+  width: 29px;
+  height: 29px;
+  border: 1px solid var(--symbol);
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  color: var(--symbol);
+  font-family: "Patrick Hand", sans-serif;
+  font-size: 0.72rem;
+}
+
+.wins-path-step strong,
+.wins-path-step small {
+  display: block;
+  font-family: "Patrick Hand", sans-serif;
+}
+
+.wins-path-step strong {
+  margin-top: 5px;
+  color: var(--ink);
+  font-size: 0.68rem;
+  font-weight: 400;
+}
+
+.wins-path-step small {
+  color: var(--muted);
+  font-size: 0.56rem;
+}
+
+.wins-path-step-reached {
+  border-color: var(--tracker);
+  background: var(--accent-soft);
+}
+
+.wins-path-step-reached > span {
+  color: var(--button-text);
+  background: var(--button);
+}
+
+.wins-today-milestones {
+  min-height: 50px;
+  margin-top: 12px;
+  padding-top: 10px;
+  border-top: 1px solid var(--line);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+}
+
+.wins-today-milestones > div {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+}
+
+.wins-today-milestones span,
+.wins-today-milestones strong,
+.wins-today-milestones p {
+  font-family: "Patrick Hand", sans-serif;
+}
+
+.wins-today-milestones span {
+  color: var(--muted);
+  font-size: 0.7rem;
+}
+
+.wins-today-milestones strong {
+  color: var(--number);
+  font-size: 1.4rem;
+  font-weight: 400;
+}
+
+.wins-today-milestones p {
+  margin: 0;
+  color: var(--accent);
+  font-size: 0.78rem;
+}
+
+@media (max-width: 1100px) {
+  .wins-summary,
+  .wins-middle-grid,
+  .wins-week-pair,
+  .wins-project-paths {
+    grid-template-columns: 1fr;
+  }
+
+  .wins-proud-wide .wins-proud-list {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 700px) {
+  .wins-week-days {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .wins-path {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .wins-today-milestones {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}

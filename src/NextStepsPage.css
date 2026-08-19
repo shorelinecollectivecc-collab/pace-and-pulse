@@ -1,0 +1,436 @@
+.next-steps-page {
+  width: 100%;
+  min-height: 100%;
+  padding-bottom: 28px;
+  color: var(--ink);
+}
+
+.next-steps-heading {
+  min-height: 64px;
+  padding: 2px 4px 12px;
+  border-bottom: 1px solid var(--line);
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 18px;
+}
+
+.next-steps-heading p,
+.next-steps-heading h2,
+.next-goal-card-heading p,
+.next-goal-card-heading h3,
+.next-section-heading p,
+.next-section-heading h3 {
+  margin: 0;
+}
+
+.next-steps-heading p,
+.next-goal-card-heading p,
+.next-section-heading p {
+  color: var(--accent);
+  font-family: "Patrick Hand", sans-serif;
+}
+
+.next-steps-heading p {
+  font-size: 0.86rem;
+}
+
+.next-steps-heading h2 {
+  color: var(--ink);
+  font-family: var(--display-font);
+  font-size: 2.25rem;
+  font-weight: 400;
+  line-height: 1;
+}
+
+.next-steps-heading > span {
+  margin-top: 13px;
+  color: var(--muted);
+  font-family: "Patrick Hand", sans-serif;
+  font-size: 0.8rem;
+}
+
+.next-goal-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.next-project-goals {
+  margin-top: 12px;
+  display: grid;
+  gap: 12px;
+}
+
+.next-project-group {
+  padding: 14px;
+  border: 1px solid var(--line);
+  border-radius: 19px;
+  background: color-mix(in srgb, var(--surface) 54%, transparent);
+}
+
+.next-project-group-heading {
+  margin-bottom: 12px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 14px;
+}
+
+.next-project-group-heading p,
+.next-project-group-heading h3 {
+  margin: 0;
+}
+
+.next-project-group-heading p {
+  color: var(--accent);
+  font-family: "Patrick Hand", sans-serif;
+  font-size: 0.82rem;
+}
+
+.next-project-group-heading h3 {
+  color: var(--ink);
+  font-family: var(--display-font);
+  font-size: 1.45rem;
+  font-weight: 400;
+  line-height: 1;
+}
+
+.next-project-group-heading > span {
+  color: var(--muted);
+  font-family: "Patrick Hand", sans-serif;
+  font-size: 0.75rem;
+}
+
+.next-goal-card,
+.next-priorities-card,
+.next-kind-card {
+  min-width: 0;
+  border: 1px solid var(--line);
+  border-radius: 17px;
+  color: var(--ink);
+  background: var(--surface);
+  box-shadow: 0 10px 24px rgba(15, 15, 14, 0.13);
+}
+
+.next-goal-card {
+  min-height: 245px;
+  padding: 16px 18px;
+}
+
+.next-goal-card-heading,
+.next-section-heading {
+  padding-bottom: 11px;
+  border-bottom: 1px solid var(--line);
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.next-goal-card-heading p,
+.next-section-heading p {
+  font-size: 0.75rem;
+}
+
+.next-goal-card-heading h3,
+.next-section-heading h3 {
+  color: var(--ink);
+  font-family: var(--display-font);
+  font-size: 1.48rem;
+  font-weight: 400;
+  line-height: 1;
+}
+
+.next-goal-card-heading > span,
+.next-section-heading > span {
+  color: var(--number);
+  font-family: "Patrick Hand", sans-serif;
+  font-size: 0.84rem;
+}
+
+.next-goal-progress {
+  height: 6px;
+  margin-top: 18px;
+  overflow: hidden;
+  border-radius: 999px;
+  background: color-mix(
+    in srgb,
+    var(--tracker) 22%,
+    transparent
+  );
+}
+
+.next-goal-progress > span {
+  display: block;
+  height: 100%;
+  border-radius: inherit;
+  background: var(--tracker);
+  transition: width 220ms ease;
+}
+
+.next-goal-details {
+  margin-top: 13px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.next-goal-details > div {
+  min-width: 0;
+  padding: 0 10px;
+  text-align: center;
+}
+
+.next-goal-details > div + div {
+  border-left: 1px solid var(--line);
+}
+
+.next-goal-details span,
+.next-goal-details strong {
+  display: block;
+  font-family: "Patrick Hand", sans-serif;
+}
+
+.next-goal-details span {
+  color: var(--muted);
+  font-size: 0.68rem;
+}
+
+.next-goal-details strong {
+  color: var(--number);
+  font-size: 1.25rem;
+  font-weight: 400;
+}
+
+.next-goal-adjuster {
+  margin-top: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.next-goal-adjuster > span {
+  color: var(--muted);
+  font-family: "Patrick Hand", sans-serif;
+  font-size: 0.75rem;
+}
+
+.next-goal-adjuster > div {
+  display: grid;
+  grid-template-columns: 30px 55px 30px;
+  align-items: center;
+}
+
+.next-goal-adjuster button,
+.next-goal-adjuster input {
+  height: 30px;
+  border: 1px solid var(--line);
+  outline: none;
+  color: var(--ink);
+  background: transparent;
+  font-family: "Patrick Hand", sans-serif;
+  text-align: center;
+}
+
+.next-goal-adjuster button {
+  padding: 0;
+  cursor: pointer;
+}
+
+.next-goal-adjuster button:first-child {
+  border-radius: 9px 0 0 9px;
+}
+
+.next-goal-adjuster button:last-child {
+  border-radius: 0 9px 9px 0;
+}
+
+.next-goal-adjuster input {
+  width: 55px;
+  border-inline: 0;
+  appearance: textfield;
+}
+
+.next-goal-adjuster input::-webkit-inner-spin-button,
+.next-goal-adjuster input::-webkit-outer-spin-button {
+  appearance: none;
+}
+
+.next-goal-adjuster button:hover {
+  color: var(--button-text);
+  background: var(--button);
+}
+
+.next-lower-grid {
+  margin-top: 12px;
+  display: grid;
+  grid-template-columns: minmax(0, 1.25fr) minmax(320px, 0.75fr);
+  gap: 12px;
+}
+
+.next-priorities-card,
+.next-kind-card {
+  min-height: 315px;
+  padding: 17px 19px;
+}
+
+.next-priority-list {
+  margin-top: 13px;
+  display: grid;
+  gap: 8px;
+}
+
+.next-priority {
+  min-width: 0;
+  min-height: 49px;
+  padding: 6px 10px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  display: grid;
+  grid-template-columns: 32px minmax(0, 1fr);
+  align-items: center;
+  gap: 10px;
+  background: color-mix(
+    in srgb,
+    var(--surface-hover) 42%,
+    transparent
+  );
+}
+
+.next-priority > input[type="checkbox"] {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+}
+
+.next-priority-check {
+  width: 30px;
+  height: 30px;
+  border: 1px solid var(--symbol);
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  color: var(--symbol);
+  font-family: "Patrick Hand", sans-serif;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.next-priority > input[type="text"] {
+  width: 100%;
+  min-width: 0;
+  height: 34px;
+  padding: 4px 7px;
+  border: 0;
+  border-bottom: 1px solid var(--line);
+  outline: none;
+  color: var(--ink);
+  background: transparent;
+  font-family: "Patrick Hand", sans-serif;
+  font-size: 1rem;
+}
+
+.next-priority > input[type="text"]::placeholder,
+.next-writing-field input::placeholder,
+.next-writing-field textarea::placeholder {
+  color: var(--muted);
+  opacity: 0.7;
+}
+
+.next-priority-done {
+  background: color-mix(
+    in srgb,
+    var(--accent-soft) 65%,
+    var(--surface)
+  );
+}
+
+.next-priority-done .next-priority-check {
+  color: var(--button-text);
+  background: var(--button);
+}
+
+.next-priority-done > input[type="text"] {
+  color: var(--muted);
+  text-decoration: line-through;
+}
+
+.next-encouragement {
+  margin: 11px 0 0;
+  color: var(--accent);
+  font-family: var(--display-font);
+  font-size: 1.08rem;
+  text-align: center;
+}
+
+.next-writing-field {
+  margin-top: 14px;
+  display: grid;
+  gap: 5px;
+}
+
+.next-writing-field > span {
+  color: var(--accent);
+  font-family: "Patrick Hand", sans-serif;
+  font-size: 0.76rem;
+}
+
+.next-writing-field textarea,
+.next-writing-field input {
+  width: 100%;
+  border: 1px solid var(--line);
+  border-radius: 11px;
+  outline: none;
+  color: var(--ink);
+  background: color-mix(
+    in srgb,
+    var(--surface-hover) 48%,
+    transparent
+  );
+  font-family: "Patrick Hand", sans-serif;
+  font-size: 0.9rem;
+}
+
+.next-writing-field textarea {
+  min-height: 92px;
+  padding: 9px 10px;
+  resize: none;
+}
+
+.next-writing-field input {
+  height: 40px;
+  padding: 6px 10px;
+}
+
+.next-writing-field textarea:focus,
+.next-writing-field input:focus,
+.next-priority > input[type="text"]:focus {
+  border-color: var(--accent);
+}
+
+@media (max-width: 1100px) {
+  .next-goal-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .next-goal-card {
+    min-height: 210px;
+  }
+
+  .next-lower-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 720px) {
+  .next-steps-heading {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .next-steps-heading > span {
+    margin-top: 0;
+  }
+}

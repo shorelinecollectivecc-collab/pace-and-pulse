@@ -1,0 +1,901 @@
+.welcome-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 10000;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+  background:
+    radial-gradient(circle at 20% 10%, color-mix(in srgb, var(--accent) 18%, transparent), transparent 36%),
+    color-mix(in srgb, var(--ink) 62%, transparent);
+  backdrop-filter: blur(10px);
+}
+
+.welcome-card {
+  position: relative;
+  width: min(580px, 100%);
+  max-height: calc(100dvh - 48px);
+  padding: 44px;
+  overflow-y: auto;
+  border: 1px solid var(--line);
+  border-radius: 28px;
+  color: var(--ink);
+  background:
+    linear-gradient(var(--card), var(--card)),
+    color-mix(in srgb, var(--surface) 94%, #efe4cf 6%);
+  box-shadow: 0 24px 70px color-mix(in srgb, var(--ink) 24%, transparent);
+  text-align: center;
+}
+
+.welcome-skip,
+.welcome-back {
+  position: absolute;
+  top: 18px;
+  border: 0;
+  color: var(--ink);
+  background: transparent;
+  opacity: 0.78;
+}
+
+.welcome-skip {
+  right: 20px;
+}
+
+.welcome-back {
+  left: 20px;
+}
+
+.welcome-mark {
+  display: block;
+  width: 112px;
+  height: 112px;
+  margin: 6px auto 20px;
+  object-fit: contain;
+}
+
+.welcome-auth-mark {
+  width: 86px;
+  height: 86px;
+  margin-bottom: 12px;
+}
+
+.welcome-card > p {
+  margin: 0 0 6px;
+  color: var(--ink);
+  font-size: 1rem;
+  opacity: 0.8;
+}
+
+.welcome-card h2 {
+  margin: 0 0 14px;
+  font-family: var(--display-font);
+  font-size: clamp(2rem, 6vw, 3rem);
+  font-weight: 400;
+  line-height: 1.05;
+}
+
+.welcome-auth-card h2 {
+  font-size: clamp(1.9rem, 5vw, 2.65rem);
+}
+
+.welcome-card > span {
+  display: block;
+  max-width: 440px;
+  margin: 0 auto;
+  color: var(--ink);
+  font-size: 1.05rem;
+  line-height: 1.6;
+  opacity: 0.84;
+}
+
+.welcome-dots {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 28px 0 22px;
+}
+
+.welcome-dots button {
+  width: 10px;
+  height: 10px;
+  padding: 0;
+  border: 1px solid var(--accent);
+  border-radius: 50%;
+  background: transparent;
+}
+
+.welcome-dots .welcome-dot-active {
+  width: 28px;
+  border-radius: 999px;
+  background: var(--accent);
+}
+
+.welcome-actions,
+.welcome-choice-actions {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.welcome-choice-actions {
+  margin-top: 28px;
+  flex-direction: column;
+}
+
+.welcome-actions button,
+.welcome-choice-actions button,
+.welcome-switch {
+  min-height: 44px;
+  padding: 11px 18px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  color: var(--ink);
+  background: transparent;
+}
+
+.welcome-next,
+.welcome-submit {
+  border-color: var(--button) !important;
+  color: var(--button-ink) !important;
+  background: var(--button) !important;
+}
+
+.welcome-form {
+  display: grid;
+  gap: 14px;
+  margin-top: 24px;
+  text-align: left;
+}
+
+.welcome-form label {
+  display: grid;
+  gap: 6px;
+}
+
+.welcome-form label > span {
+  font-size: 0.92rem;
+  opacity: 0.84;
+}
+
+.welcome-form small {
+  font-size: 0.74rem;
+  font-weight: 400;
+  opacity: 0.7;
+}
+
+.welcome-form input {
+  width: 100%;
+  min-height: 46px;
+  padding: 10px 13px;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  color: var(--ink);
+  background: color-mix(in srgb, var(--surface) 82%, transparent);
+  font: inherit;
+  outline: none;
+}
+
+.welcome-form input:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--accent) 14%, transparent);
+}
+
+.welcome-password-field {
+  position: relative;
+}
+
+.welcome-password-field input {
+  padding-right: 64px;
+}
+
+.welcome-password-field button {
+  position: absolute;
+  top: 50%;
+  right: 8px;
+  transform: translateY(-50%);
+  padding: 7px 9px;
+  border: 0;
+  color: var(--ink);
+  background: transparent;
+  opacity: 0.74;
+}
+
+.welcome-password-note,
+.welcome-hint,
+.welcome-note {
+  display: grid;
+  gap: 4px;
+  padding: 13px 15px;
+  border: 1px dashed color-mix(in srgb, var(--accent) 60%, var(--line));
+  border-radius: 16px;
+  background: color-mix(in srgb, var(--accent) 8%, transparent);
+  font-size: 0.9rem;
+  line-height: 1.45;
+}
+
+.welcome-note {
+  margin-top: 22px;
+}
+
+.welcome-password-note strong,
+.welcome-hint strong {
+  font-family: var(--display-font);
+  font-size: 1.05rem;
+  font-weight: 400;
+}
+
+.welcome-remember {
+  display: flex !important;
+  grid-template-columns: none;
+  align-items: center;
+  gap: 8px !important;
+}
+
+.welcome-remember input {
+  width: 18px;
+  min-height: 18px;
+  margin: 0;
+  accent-color: var(--accent);
+}
+
+.welcome-help-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.welcome-help-row button,
+.welcome-switch {
+  border: 0;
+  color: var(--ink);
+  background: transparent;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  opacity: 0.82;
+}
+
+.welcome-message {
+  margin: 0 !important;
+  padding: 10px 12px;
+  border-radius: 12px;
+  background: color-mix(in srgb, var(--accent) 10%, transparent);
+  font-size: 0.9rem !important;
+  line-height: 1.4;
+  text-align: center;
+  opacity: 1 !important;
+}
+
+.welcome-submit {
+  min-height: 48px;
+  margin-top: 4px;
+  border: 1px solid var(--button);
+  border-radius: 999px;
+  font: inherit;
+}
+
+.welcome-submit:disabled {
+  cursor: wait;
+  opacity: 0.7;
+}
+
+.welcome-switch {
+  margin-top: 14px;
+}
+
+.welcome-loading {
+  width: min(360px, 100%);
+  padding: 36px;
+}
+
+.welcome-pulse {
+  display: block;
+  width: 18px;
+  height: 18px;
+  margin: 0 auto 14px;
+  border-radius: 50%;
+  background: var(--accent);
+  animation: welcome-pulse 1.2s ease-in-out infinite;
+}
+
+@keyframes welcome-pulse {
+  50% {
+    transform: scale(1.35);
+    opacity: 0.45;
+  }
+}
+
+@media (max-width: 620px) {
+  .welcome-backdrop {
+    padding:
+      max(12px, env(safe-area-inset-top))
+      max(12px, env(safe-area-inset-right))
+      max(12px, env(safe-area-inset-bottom))
+      max(12px, env(safe-area-inset-left));
+  }
+
+  .welcome-card {
+    max-height: calc(100dvh - 24px);
+    padding: 52px 22px 26px;
+    border-radius: 22px;
+  }
+
+  .welcome-mark {
+    width: 92px;
+    height: 92px;
+    margin-bottom: 16px;
+  }
+
+  .welcome-auth-mark {
+    width: 74px;
+    height: 74px;
+  }
+
+  .welcome-card h2 {
+    font-size: clamp(2rem, 11vw, 2.75rem);
+  }
+
+  .welcome-auth-card h2 {
+    font-size: clamp(1.8rem, 9vw, 2.35rem);
+  }
+
+  .welcome-card > span {
+    font-size: 1rem;
+    line-height: 1.45;
+  }
+
+  .welcome-actions button {
+    min-height: 44px;
+  }
+
+  .welcome-help-row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+/* Pace & Pulse compact authentication polish */
+.welcome-backdrop {
+  padding: 18px;
+  backdrop-filter: blur(8px);
+  animation: welcome-backdrop-in 220ms ease-out;
+}
+
+.welcome-card {
+  width: min(560px, 100%);
+  max-height: calc(100dvh - 36px);
+  padding: 34px 38px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: color-mix(in srgb, var(--accent) 78%, var(--ink) 22%) transparent;
+  animation: welcome-card-in 260ms ease-out;
+}
+
+.welcome-card::-webkit-scrollbar {
+  width: 7px;
+}
+
+.welcome-card::-webkit-scrollbar-track {
+  margin-block: 16px;
+  border-radius: 999px;
+  background: transparent;
+}
+
+.welcome-card::-webkit-scrollbar-thumb {
+  min-height: 54px;
+  border: 2px solid transparent;
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--accent) 76%, var(--ink) 24%);
+  background-clip: padding-box;
+}
+
+.welcome-card::-webkit-scrollbar-thumb:hover {
+  background: color-mix(in srgb, var(--accent) 90%, var(--ink) 10%);
+  background-clip: padding-box;
+}
+
+.welcome-skip,
+.welcome-back {
+  top: 15px;
+}
+
+.welcome-skip {
+  right: 18px;
+}
+
+.welcome-back {
+  left: 18px;
+}
+
+.welcome-mark {
+  width: 94px;
+  height: 94px;
+  margin: 2px auto 14px;
+}
+
+.welcome-auth-mark {
+  width: 72px;
+  height: 72px;
+  margin-bottom: 8px;
+}
+
+.welcome-card > p {
+  margin-bottom: 4px;
+  font-size: 0.94rem;
+}
+
+.welcome-card h2 {
+  margin-bottom: 10px;
+  font-size: clamp(1.9rem, 5vw, 2.75rem);
+  line-height: 1.02;
+}
+
+.welcome-auth-card h2 {
+  font-size: clamp(1.72rem, 4.5vw, 2.35rem);
+}
+
+.welcome-card > span {
+  font-size: 0.98rem;
+  line-height: 1.48;
+}
+
+.welcome-dots {
+  margin: 22px 0 17px;
+}
+
+.welcome-choice-actions {
+  margin-top: 22px;
+}
+
+.welcome-actions button,
+.welcome-choice-actions button,
+.welcome-switch {
+  min-height: 40px;
+  padding: 9px 16px;
+  transition: transform 160ms ease, border-color 160ms ease, background 160ms ease, opacity 160ms ease;
+}
+
+.welcome-actions button:hover,
+.welcome-choice-actions button:hover,
+.welcome-switch:hover,
+.welcome-submit:hover {
+  transform: translateY(-1px);
+}
+
+.welcome-form {
+  gap: 10px;
+  margin-top: 17px;
+}
+
+.welcome-form label {
+  gap: 4px;
+}
+
+.welcome-form label > span {
+  font-size: 0.86rem;
+}
+
+.welcome-form input {
+  min-height: 41px;
+  padding: 8px 12px;
+  border-radius: 13px;
+}
+
+.welcome-password-note,
+.welcome-hint,
+.welcome-note {
+  padding: 10px 13px;
+  border-radius: 14px;
+  font-size: 0.84rem;
+  line-height: 1.38;
+}
+
+.welcome-note {
+  margin-top: 17px;
+}
+
+.welcome-message {
+  padding: 8px 11px;
+  font-size: 0.84rem !important;
+}
+
+.welcome-submit {
+  min-height: 43px;
+  margin-top: 2px;
+  transition: transform 160ms ease, opacity 160ms ease, box-shadow 160ms ease;
+}
+
+.welcome-submit:hover {
+  box-shadow: 0 8px 20px color-mix(in srgb, var(--button) 22%, transparent);
+}
+
+.welcome-switch {
+  margin-top: 10px;
+}
+
+@keyframes welcome-backdrop-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes welcome-card-in {
+  from {
+    transform: translateY(8px) scale(0.99);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+}
+
+@media (max-height: 850px) and (min-width: 621px) {
+  .welcome-card {
+    max-height: calc(100dvh - 24px);
+    padding: 28px 34px;
+  }
+
+  .welcome-auth-mark {
+    width: 62px;
+    height: 62px;
+    margin-bottom: 6px;
+  }
+
+  .welcome-auth-card h2 {
+    font-size: clamp(1.55rem, 4vw, 2.05rem);
+  }
+
+  .welcome-form {
+    gap: 8px;
+    margin-top: 13px;
+  }
+
+  .welcome-form input {
+    min-height: 38px;
+    padding-block: 7px;
+  }
+
+  .welcome-password-note,
+  .welcome-hint,
+  .welcome-note {
+    padding: 8px 11px;
+  }
+
+  .welcome-submit {
+    min-height: 40px;
+  }
+}
+
+@media (max-width: 620px) {
+  .welcome-backdrop {
+    padding: max(10px, env(safe-area-inset-top)) max(10px, env(safe-area-inset-right)) max(10px, env(safe-area-inset-bottom)) max(10px, env(safe-area-inset-left));
+  }
+
+  .welcome-card {
+    max-height: calc(100dvh - 20px);
+    padding: 46px 20px 22px;
+    border-radius: 21px;
+  }
+
+  .welcome-mark {
+    width: 82px;
+    height: 82px;
+  }
+
+  .welcome-auth-mark {
+    width: 64px;
+    height: 64px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .welcome-backdrop,
+  .welcome-card {
+    animation: none;
+  }
+}
+
+.welcome-onboarding-card {
+  width: min(680px, 100%);
+}
+
+.onboarding-progress {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin: 0 0 16px;
+}
+
+.onboarding-progress span {
+  width: 30px;
+  height: 4px;
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--line) 75%, transparent);
+}
+
+.onboarding-progress span.active {
+  background: var(--accent);
+}
+
+.onboarding-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.onboarding-wide {
+  grid-column: 1 / -1;
+}
+
+.welcome-form select {
+  width: 100%;
+  min-height: 41px;
+  padding: 8px 12px;
+  border: 1px solid var(--line);
+  border-radius: 13px;
+  color: var(--ink);
+  background: color-mix(in srgb, var(--surface) 82%, transparent);
+  font: inherit;
+  outline: none;
+}
+
+.welcome-form select:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--accent) 13%, transparent);
+}
+
+.onboarding-avatar-placeholder {
+  display: grid;
+  gap: 4px;
+  place-items: center;
+  min-height: 92px;
+  padding: 16px;
+  border: 1px dashed var(--line);
+  border-radius: 16px;
+  background: color-mix(in srgb, var(--accent) 6%, transparent);
+  text-align: center;
+}
+
+.onboarding-avatar-placeholder small {
+  opacity: 0.68;
+}
+
+.onboarding-choice-group {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.onboarding-choice-group legend {
+  margin-bottom: 7px;
+  font-size: 0.86rem;
+  opacity: 0.82;
+}
+
+.onboarding-choice-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 7px;
+}
+
+.onboarding-choice-grid.compact {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.onboarding-choice-grid button {
+  min-height: 38px;
+  padding: 7px 9px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  color: var(--ink);
+  background: transparent;
+  font: inherit;
+}
+
+.onboarding-choice-grid button.selected {
+  border-color: var(--accent);
+  background: color-mix(in srgb, var(--accent) 15%, transparent);
+  box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--accent) 40%, transparent);
+}
+
+.onboarding-actions {
+  margin-top: 18px;
+}
+
+.welcome-ready .welcome-submit {
+  width: min(300px, 100%);
+  margin-top: 24px;
+}
+
+@media (max-width: 620px) {
+  .onboarding-grid,
+  .onboarding-choice-grid,
+  .onboarding-choice-grid.compact {
+    grid-template-columns: 1fr;
+  }
+
+  .onboarding-wide {
+    grid-column: auto;
+  }
+}
+
+
+/* Real profile-picture chooser */
+.onboarding-avatar-upload {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 14px;
+  border: 1px dashed var(--line);
+  border-radius: 17px;
+  background: color-mix(in srgb, var(--accent) 6%, transparent);
+}
+
+.onboarding-avatar-preview {
+  display: grid;
+  width: 78px;
+  height: 78px;
+  flex: 0 0 78px;
+  place-items: center;
+  overflow: hidden;
+  border: 1px solid color-mix(in srgb, var(--accent) 70%, var(--line));
+  border-radius: 50%;
+  background: color-mix(in srgb, var(--surface) 88%, transparent);
+  font-family: var(--display-font);
+  font-size: 2rem;
+}
+
+.onboarding-avatar-preview img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.onboarding-avatar-copy {
+  display: grid;
+  justify-items: start;
+  gap: 6px;
+  min-width: 0;
+}
+
+.onboarding-avatar-copy > span {
+  font-size: 0.9rem;
+}
+
+.onboarding-upload-button,
+.onboarding-remove-photo {
+  display: inline-flex;
+  min-height: 35px;
+  align-items: center;
+  justify-content: center;
+  padding: 7px 13px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  color: var(--ink);
+  background: color-mix(in srgb, var(--surface) 82%, transparent);
+  font: inherit;
+  cursor: pointer;
+}
+
+.onboarding-upload-button:hover,
+.onboarding-remove-photo:hover {
+  border-color: var(--accent);
+  background: color-mix(in srgb, var(--accent) 12%, transparent);
+}
+
+.onboarding-upload-button input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+.onboarding-remove-photo {
+  min-height: auto;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  opacity: 0.72;
+}
+
+@media (max-width: 620px) {
+  .onboarding-avatar-upload {
+    align-items: flex-start;
+  }
+
+  .onboarding-avatar-preview {
+    width: 66px;
+    height: 66px;
+    flex-basis: 66px;
+  }
+}
+
+
+/* tune in / tune out account language */
+
+.welcome-password-note {
+  color: var(--ink);
+}
+
+.welcome-password-note span {
+  opacity: 0.78;
+}
+
+.welcome-auth-card .welcome-submit {
+  letter-spacing: 0.01em;
+}
+
+
+/* onboarding choices — no native dropdowns */
+
+.welcome-onboarding-card {
+  overflow-x: hidden;
+}
+
+.onboarding-choice-group {
+  min-width: 0;
+}
+
+.onboarding-choice-grid button {
+  cursor: pointer;
+  transition:
+    border-color 150ms ease,
+    background 150ms ease,
+    box-shadow 150ms ease,
+    transform 150ms ease;
+}
+
+.onboarding-choice-grid button:hover {
+  border-color: var(--accent);
+  background:
+    color-mix(
+      in srgb,
+      var(--accent) 8%,
+      transparent
+    );
+}
+
+.onboarding-choice-grid button:active {
+  transform: translateY(1px);
+}
+
+.onboarding-choice-grid button.selected {
+  color: var(--ink);
+  border-color: var(--accent);
+  background:
+    color-mix(
+      in srgb,
+      var(--accent) 18%,
+      var(--surface)
+    );
+  box-shadow:
+    inset 0 0 0 1px
+      color-mix(
+        in srgb,
+        var(--accent) 45%,
+        transparent
+      );
+}
+
+.font-choice-grid {
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+}
+
+.font-choice-grid button {
+  min-height: 44px;
+}
+
+.date-choice-grid {
+  grid-template-columns: 1fr;
+}
+
+@media (max-width: 620px) {
+  .font-choice-grid {
+    grid-template-columns: 1fr;
+  }
+}

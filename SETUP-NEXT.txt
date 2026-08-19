@@ -1,0 +1,42 @@
+PACE & PULSE — PERSONAL WORKSPACE ONBOARDING
+
+1. Replace:
+   src/WelcomeOverlay.tsx
+   src/WelcomeOverlay.css
+
+2. In Supabase:
+   SQL Editor > New query
+
+3. Paste the full contents of:
+   supabase-onboarding-upgrade.sql
+
+4. Click Run.
+   "Success. No rows returned" is correct.
+
+5. Restart the local app:
+   Ctrl + C
+   npm run dev
+
+6. Create a new account, or sign in to an existing test account.
+   Existing accounts that have not completed onboarding will see the new
+   three-step workspace setup.
+
+7. Test:
+   - About you
+   - Work settings
+   - Theme, accent, font, clock and date format
+   - Ready screen
+   - Enter Pace & Pulse
+   - Sign out and sign back in to confirm onboarding does not repeat
+
+8. Build after testing:
+   npm run build
+
+IMPORTANT
+The onboarding preferences are now saved to the signed-in user's Supabase
+profile. Theme and font are also copied into Pace & Pulse's existing local
+keys so the current workspace can use them.
+
+The profile-picture control is intentionally marked as coming with the cloud
+storage phase. It is not pretending to upload a file before a secure Storage
+bucket and image policy have been created.

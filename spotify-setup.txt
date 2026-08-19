@@ -1,0 +1,37 @@
+pace & pulse · spotify setup
+
+what this uses
+
+- spotify web api
+- spotify web playback sdk
+- authorization code with pkce
+- no client secret is stored in pace & pulse
+
+before opening the player
+
+1. sign in at https://developer.spotify.com/dashboard
+2. create a spotify app
+3. enable the web api and web playback sdk
+4. add this exact redirect uri:
+
+   http://127.0.0.1:5174/
+
+5. copy the app's client id
+6. make a copy of .env.example and name the copy .env
+7. replace put_your_spotify_client_id_here with the client id
+8. keep this redirect value:
+
+   VITE_SPOTIFY_REDIRECT_URI=http://127.0.0.1:5174/
+
+9. start pace & pulse and open:
+
+   http://127.0.0.1:5174/
+
+important
+
+- do not use localhost for this connection
+- do not put the spotify client secret in the app
+- spotify premium is required for browser playback
+- spotify developer-mode apps support the owner and up to five allowlisted users
+- add each test user in the spotify dashboard under users management
+- a published version needs its final https address added as another redirect uri

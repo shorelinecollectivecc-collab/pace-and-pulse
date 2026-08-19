@@ -1,0 +1,15 @@
+pace & pulse refactor · step 3
+
+what changed
+- moved annotation state, validation, persistence, notifications and undo logic into src/hooks/useAnnotationWorkspace.ts
+- moved theme and font selection/persistence into src/hooks/useWorkspacePreferences.ts
+- moved active-page rendering into src/components/routing/ActiveWorkspacePage.tsx
+- reduced App.tsx from 532 lines to 225 lines
+- preserved the existing page components, UI, storage keys and behaviour
+- no css files were changed
+
+installation
+replace your current src folder with the src folder in this package.
+
+validation
+all changed TypeScript files passed syntax/transpile validation.

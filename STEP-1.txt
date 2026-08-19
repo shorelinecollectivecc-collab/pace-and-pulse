@@ -1,0 +1,20 @@
+pace & pulse refactor — step 1
+
+replace your current src folder with the src folder in this package.
+
+changes in this step:
+- moved app types out of App.tsx
+- moved themes, fonts, moods, navigation and app constants out of App.tsx
+- moved date key helpers out of App.tsx
+- moved saved annotation/theme/font loaders out of App.tsx
+- reduced App.tsx from 1,443 lines to 1,129 lines
+- no UI or feature behaviour was intentionally changed
+
+new files:
+- src/types/app.ts
+- src/constants/app.ts
+- src/utils/dateKeys.ts
+- src/utils/appStorage.ts
+
+validation:
+- all changed TypeScript files passed syntax transpilation checks

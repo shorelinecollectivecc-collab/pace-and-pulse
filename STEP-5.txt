@@ -1,0 +1,13 @@
+pace & pulse refactor — step 5
+
+what changed
+- added one shared supabase client for authentication, profiles, cloud backup and push setup
+- removed the duplicate supabase client previously created by cloudSync.ts
+- extracted authentication operations into services/auth/authService.ts
+- extracted cloud backup operations into services/cloud/workspaceCloudService.ts
+- extracted background push setup into services/push/backgroundNudgesService.ts
+- added safe shared local-storage helpers
+- extracted annotation persistence into services/annotations/annotationStorageService.ts
+- kept supabase.ts, cloudSync.ts and pushSync.ts as compatibility exports so existing imports continue to work
+- updated App.tsx and useAnnotationWorkspace.ts to use the new service layer
+- no visual or feature changes

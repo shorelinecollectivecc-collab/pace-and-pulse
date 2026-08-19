@@ -1,0 +1,453 @@
+.work-map-page {
+  width: 100%;
+  min-height: 100%;
+  padding-bottom: 28px;
+  color: var(--ink);
+}
+
+.work-map-heading {
+  min-height: 64px;
+  padding: 2px 4px 12px;
+  border-bottom: 1px solid var(--line);
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 18px;
+}
+
+.work-map-heading p,
+.work-map-heading h2,
+.work-map-week-picker span,
+.work-map-week-picker strong,
+.work-map-day-heading p,
+.work-map-day-heading span,
+.work-map-week-note p,
+.work-map-week-note h3 {
+  margin: 0;
+}
+
+.work-map-heading p,
+.work-map-week-note p {
+  color: var(--accent);
+  font-family: "Patrick Hand", sans-serif;
+  font-size: 0.86rem;
+}
+
+.work-map-heading h2 {
+  color: var(--ink);
+  font-family: var(--display-font);
+  font-size: 2.25rem;
+  font-weight: 400;
+  line-height: 1;
+}
+
+.work-map-heading > span {
+  margin-top: 13px;
+  color: var(--muted);
+  font-family: "Patrick Hand", sans-serif;
+  font-size: 0.8rem;
+}
+
+.work-map-toolbar {
+  min-height: 88px;
+  margin-top: 12px;
+  padding: 12px 15px;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  display: grid;
+  grid-template-columns:
+    minmax(280px, 0.85fr)
+    minmax(390px, 1.15fr)
+    auto;
+  align-items: center;
+  gap: 16px;
+  background: var(--surface);
+  box-shadow: 0 10px 24px rgba(15, 15, 14, 0.13);
+}
+
+.work-map-week-picker {
+  min-width: 0;
+  display: grid;
+  grid-template-columns: 34px minmax(0, 1fr) 34px;
+  align-items: center;
+  gap: 9px;
+}
+
+.work-map-week-picker button {
+  width: 34px;
+  height: 34px;
+  padding: 0;
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  color: var(--symbol);
+  background: transparent;
+  font-family: "Patrick Hand", sans-serif;
+  font-size: 1.35rem;
+  cursor: pointer;
+}
+
+.work-map-week-picker button:hover {
+  color: var(--button-text);
+  background: var(--button);
+}
+
+.work-map-week-picker > div {
+  min-width: 0;
+  text-align: center;
+}
+
+.work-map-week-picker span,
+.work-map-week-picker strong {
+  display: block;
+  font-family: "Patrick Hand", sans-serif;
+  font-weight: 400;
+}
+
+.work-map-week-picker span {
+  color: var(--accent);
+  font-size: 0.7rem;
+}
+
+.work-map-week-picker strong {
+  color: var(--ink);
+  font-size: 1rem;
+}
+
+.work-map-project-tabs {
+  min-width: 0;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.work-map-project-tab {
+  min-width: 0;
+  min-height: 58px;
+  padding: 7px 10px;
+  border: 1px solid var(--line);
+  border-radius: 11px;
+  color: var(--ink);
+  background: transparent;
+  text-align: left;
+  cursor: pointer;
+}
+
+.work-map-project-tab strong,
+.work-map-project-tab span {
+  display: block;
+  overflow: hidden;
+  font-family: var(--workspace-font);
+  font-weight: 400;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.work-map-project-tab strong {
+  font-size: 0.92rem;
+}
+
+.work-map-project-tab span {
+  margin-top: 2px;
+  color: var(--muted);
+  font-size: 0.64rem;
+}
+
+.work-map-project-tab-active {
+  border-color: var(--button);
+  color: var(--button-text);
+  background: var(--button);
+}
+
+.work-map-project-tab-active span {
+  color: var(--button-text);
+}
+
+.work-map-active-label {
+  margin-top: 12px;
+  padding: 9px 14px;
+  border: 1px solid var(--line);
+  border-radius: 13px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  background: var(--surface);
+}
+
+.work-map-active-label p,
+.work-map-active-label h3 {
+  margin: 0;
+}
+
+.work-map-active-label p {
+  color: var(--accent);
+  font-family: var(--workspace-font);
+  font-size: 0.7rem;
+}
+
+.work-map-active-label h3 {
+  font-family: var(--display-font);
+  font-size: 1.35rem;
+  font-weight: 400;
+}
+
+.work-map-active-label > span {
+  color: var(--number);
+  font-family: var(--workspace-font);
+  font-size: 0.76rem;
+}
+
+.work-map-summary {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.work-map-summary > div {
+  min-width: 0;
+  padding: 2px 14px;
+  border-left: 1px solid var(--line);
+  text-align: center;
+}
+
+.work-map-summary span,
+.work-map-summary strong {
+  display: block;
+  font-family: "Patrick Hand", sans-serif;
+}
+
+.work-map-summary span {
+  color: var(--muted);
+  font-size: 0.68rem;
+}
+
+.work-map-summary strong {
+  color: var(--number);
+  font-size: 1.4rem;
+  font-weight: 400;
+}
+
+.work-map-today-button {
+  min-height: 34px;
+  padding: 6px 12px;
+  border: 1px solid var(--button);
+  border-radius: 9px;
+  color: var(--button-text);
+  background: var(--button);
+  font-family: "Patrick Hand", sans-serif;
+  font-size: 0.76rem;
+  cursor: pointer;
+}
+
+.work-map-days {
+  margin-top: 12px;
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.work-map-day {
+  min-width: 0;
+  min-height: 310px;
+  padding: 13px 11px;
+  border: 1px solid var(--line);
+  border-radius: 15px;
+  color: var(--ink);
+  background: var(--surface);
+  box-shadow: 0 8px 19px rgba(15, 15, 14, 0.11);
+}
+
+.work-map-day-today {
+  border-color: var(--accent);
+  box-shadow:
+    inset 0 0 0 1px var(--surface),
+    0 0 0 2px var(--accent);
+}
+
+.work-map-day-rest {
+  background: color-mix(
+    in srgb,
+    var(--surface) 78%,
+    var(--background)
+  );
+}
+
+.work-map-day-heading {
+  min-height: 48px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--line);
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 5px;
+}
+
+.work-map-day-heading p {
+  color: var(--ink);
+  font-family: var(--display-font);
+  font-size: 1.15rem;
+  line-height: 1;
+}
+
+.work-map-day-heading span,
+.work-map-day-heading strong {
+  color: var(--muted);
+  font-family: "Patrick Hand", sans-serif;
+  font-size: 0.66rem;
+  font-weight: 400;
+}
+
+.work-map-day-heading strong {
+  padding: 2px 5px;
+  border-radius: 999px;
+  color: var(--button-text);
+  background: var(--accent);
+}
+
+.work-map-rest-toggle {
+  min-height: 32px;
+  margin-top: 8px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--muted);
+  font-family: "Patrick Hand", sans-serif;
+  font-size: 0.72rem;
+  cursor: pointer;
+}
+
+.work-map-rest-toggle input {
+  width: 15px;
+  height: 15px;
+  margin: 0;
+  accent-color: var(--accent);
+}
+
+.work-map-number-row {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 6px;
+}
+
+.work-map-number-row label,
+.work-map-focus-field {
+  min-width: 0;
+  display: grid;
+  gap: 3px;
+}
+
+.work-map-number-row span,
+.work-map-focus-field span {
+  color: var(--accent);
+  font-family: "Patrick Hand", sans-serif;
+  font-size: 0.62rem;
+}
+
+.work-map-number-row input {
+  width: 100%;
+  min-width: 0;
+  height: 34px;
+  padding: 4px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  outline: none;
+  color: var(--number);
+  background: transparent;
+  font-family: "Patrick Hand", sans-serif;
+  font-size: 0.92rem;
+  text-align: center;
+}
+
+.work-map-focus-field {
+  margin-top: 9px;
+}
+
+.work-map-focus-field textarea {
+  width: 100%;
+  min-height: 92px;
+  padding: 7px;
+  border: 1px solid var(--line);
+  border-radius: 9px;
+  outline: none;
+  resize: none;
+  color: var(--ink);
+  background: color-mix(
+    in srgb,
+    var(--surface-hover) 45%,
+    transparent
+  );
+  font-family: "Patrick Hand", sans-serif;
+  font-size: 0.75rem;
+}
+
+.work-map-number-row input:focus,
+.work-map-focus-field textarea:focus,
+.work-map-week-note textarea:focus {
+  border-color: var(--accent);
+}
+
+.work-map-rest-note {
+  margin: 54px 5px 0;
+  color: var(--accent);
+  font-family: var(--display-font);
+  font-size: 1rem;
+  text-align: center;
+}
+
+.work-map-week-note {
+  min-height: 115px;
+  margin-top: 12px;
+  padding: 14px 17px;
+  border: 1px solid var(--line);
+  border-radius: 15px;
+  display: grid;
+  grid-template-columns:
+    minmax(220px, 0.42fr)
+    minmax(0, 1.58fr);
+  align-items: center;
+  gap: 18px;
+  background: var(--surface);
+}
+
+.work-map-week-note h3 {
+  color: var(--ink);
+  font-family: var(--display-font);
+  font-size: 1.35rem;
+  font-weight: 400;
+}
+
+.work-map-week-note textarea {
+  width: 100%;
+  min-height: 78px;
+  padding: 8px 10px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  outline: none;
+  resize: none;
+  color: var(--ink);
+  background: transparent;
+  font-family: "Patrick Hand", sans-serif;
+  font-size: 0.86rem;
+}
+
+@media (max-width: 1250px) {
+  .work-map-days {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .work-map-toolbar {
+    grid-template-columns:
+      minmax(250px, 0.8fr)
+      minmax(360px, 1.2fr);
+  }
+}
+
+@media (max-width: 800px) {
+  .work-map-toolbar,
+  .work-map-week-note {
+    grid-template-columns: 1fr;
+  }
+
+  .work-map-days {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}

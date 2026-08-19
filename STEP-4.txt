@@ -1,0 +1,14 @@
+pace & pulse · brain teasers expansion
+
+replace your current src folder with the src folder in this package.
+
+added:
+- interactive 6x6, 9x9 and 12x12 sudoku
+- easy, medium and hard crosswords
+- easy, medium and hard guided drawing canvases
+- interactive musical rhythm teasers
+- interactive maths teasers
+- built-in catch-the-firefly and number-trail mini games
+- harder versions of the existing memory, sequence, maze, symbol, counting and odd-one puzzles
+
+no service-layer changes were made in this step.

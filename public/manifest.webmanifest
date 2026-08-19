@@ -1,0 +1,25 @@
+{
+  "name": "pace & pulse",
+  "short_name": "pace & pulse",
+  "description": "a calm audhd-friendly workspace for music and video annotation",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#a6947f",
+  "theme_color": "#5d8278",
+  "orientation": "any",
+  "icons": [
+    {
+      "src": "/icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}

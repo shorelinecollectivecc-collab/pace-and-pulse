@@ -1,0 +1,47 @@
+# dependencies
+node_modules/
+
+# production builds
+dist/
+build/
+dist-ssr/
+
+# tauri build output
+src-tauri/target/
+
+# environment files / secrets
+.env
+.env.*
+!.env.example
+
+# local files
+*.local
+
+# logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# operating system files
+.DS_Store
+Thumbs.db
+
+# vercel
+.vercel/
+
+# local release archives
+*.zip

@@ -1,0 +1,521 @@
+.profile-page {
+  width: 100%;
+  min-width: 0;
+  padding-bottom: 36px;
+  color: var(--ink);
+}
+
+.profile-page-header {
+  min-height: 76px;
+  padding: 2px 4px 12px;
+  border-bottom: 1px solid var(--line);
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto auto;
+  align-items: start;
+  gap: 18px;
+}
+
+.profile-page-header p,
+.profile-page-header h2,
+.profile-section-heading p,
+.profile-section-heading h3 {
+  margin: 0;
+}
+
+.profile-page-header p,
+.profile-section-heading p {
+  color: var(--accent);
+  font-family: var(--workspace-font);
+}
+
+.profile-page-header p {
+  font-size: 0.9rem;
+}
+
+.profile-page-header h2 {
+  color: var(--ink);
+  font-family: var(--display-font);
+  font-size: clamp(2rem, 3.2vw, 3.05rem);
+  font-weight: 400;
+  line-height: 1;
+}
+
+.profile-page-header time,
+.profile-save-state {
+  margin-top: 16px;
+  color: var(--muted);
+  font-family: var(--workspace-font);
+  font-size: 0.84rem;
+}
+
+.profile-save-state {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.profile-save-state > span {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--muted);
+  transition: background 180ms ease;
+}
+
+.profile-save-state > .saved-dot {
+  background: var(--symbol);
+}
+
+.profile-theme-banner {
+  min-height: 112px;
+  margin-top: 14px;
+  padding: 20px 26px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  background-position: center;
+  background-size: cover;
+  box-shadow: 0 10px 24px rgba(15, 15, 14, 0.13);
+  display: flex;
+  align-items: center;
+}
+
+.profile-theme-banner > div {
+  max-width: 460px;
+  padding: 10px 16px;
+  border-radius: 14px;
+  background: color-mix(
+    in srgb,
+    var(--surface) 78%,
+    transparent
+  );
+  backdrop-filter: blur(3px);
+}
+
+.profile-theme-banner p,
+.profile-theme-banner span {
+  margin: 0;
+  color: var(--banner-text);
+  font-family: var(--display-font);
+}
+
+.profile-theme-banner p {
+  font-size: 2rem;
+  line-height: 1;
+}
+
+.profile-theme-banner span {
+  display: block;
+  margin-top: 3px;
+  color: var(--banner-muted);
+  font-family: var(--workspace-font);
+  font-size: 0.88rem;
+}
+
+.profile-layout {
+  margin-top: 14px;
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.profile-card {
+  min-width: 0;
+  padding: 20px;
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  background: var(--surface);
+  box-shadow: 0 10px 24px rgba(15, 15, 14, 0.13);
+}
+
+.profile-card:hover {
+  background: var(--surface);
+}
+
+.profile-identity-card,
+.profile-music-card,
+.profile-screen-card,
+.profile-watch-card {
+  grid-column: span 6;
+}
+
+.profile-hobbies-card,
+.profile-support-card {
+  grid-column: span 6;
+}
+
+.profile-manual-card {
+  grid-column: span 8;
+}
+
+.profile-about-card {
+  grid-column: span 4;
+}
+
+.profile-section-heading {
+  min-height: 52px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--line);
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 14px;
+}
+
+.profile-section-heading p {
+  font-size: 0.82rem;
+}
+
+.profile-section-heading h3 {
+  color: var(--ink);
+  font-family: var(--display-font);
+  font-size: 1.7rem;
+  font-weight: 400;
+  line-height: 1;
+}
+
+.profile-section-heading > span {
+  margin-top: 8px;
+  color: var(--muted);
+  font-family: var(--workspace-font);
+  font-size: 0.78rem;
+}
+
+.profile-identity-content {
+  margin-top: 18px;
+  display: grid;
+  grid-template-columns: 150px minmax(0, 1fr);
+  align-items: start;
+  gap: 20px;
+}
+
+.profile-photo-area {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.profile-photo-button {
+  position: relative;
+  width: 136px;
+  height: 136px;
+  padding: 0;
+  overflow: hidden;
+  border: 2px solid var(--symbol);
+  border-radius: 50%;
+  outline: none;
+  color: var(--button-text);
+  background: var(--button);
+  cursor: pointer;
+}
+
+.profile-photo-button > img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.profile-photo-button > span {
+  font-family: var(--display-font);
+  font-size: 3.5rem;
+}
+
+.profile-photo-button > small {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 7px 4px 9px;
+  color: var(--button-text);
+  background: color-mix(
+    in srgb,
+    var(--button) 88%,
+    transparent
+  );
+  font-family: var(--workspace-font);
+  font-size: 0.7rem;
+  opacity: 0;
+  transition: opacity 160ms ease;
+}
+
+.profile-photo-button:hover > small,
+.profile-photo-button:focus-visible > small {
+  opacity: 1;
+}
+
+.profile-file-input {
+  display: none;
+}
+
+.profile-photo-remove {
+  margin-top: 9px;
+  padding: 3px 6px;
+  border: 0;
+  color: var(--muted);
+  background: transparent;
+  font-family: var(--workspace-font);
+  font-size: 0.75rem;
+  cursor: pointer;
+}
+
+.profile-photo-remove:hover {
+  color: var(--accent);
+}
+
+.profile-photo-error {
+  margin: 6px 0 0;
+  color: var(--number);
+  font-family: var(--workspace-font);
+  font-size: 0.72rem;
+  text-align: center;
+}
+
+.profile-field-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 13px;
+}
+
+.profile-music-card .profile-field-grid,
+.profile-select-grid {
+  margin-top: 18px;
+}
+
+.profile-field-wide {
+  grid-column: 1 / -1;
+}
+
+.profile-card label {
+  min-width: 0;
+  display: block;
+}
+
+.profile-card label > span {
+  display: block;
+  margin-bottom: 5px;
+  color: var(--muted);
+  font-family: var(--workspace-font);
+  font-size: 0.8rem;
+}
+
+.profile-card input,
+.profile-card select,
+.profile-card textarea {
+  width: 100%;
+  min-width: 0;
+  border: 1px solid var(--line);
+  border-radius: 11px;
+  outline: none;
+  color: var(--ink);
+  background: color-mix(
+    in srgb,
+    var(--surface) 78%,
+    var(--background)
+  );
+  font: inherit;
+  font-family: var(--workspace-font);
+  font-size: 0.93rem;
+}
+
+.profile-card input,
+.profile-card select {
+  height: 42px;
+  padding: 0 12px;
+}
+
+.profile-card textarea {
+  padding: 10px 12px;
+  resize: vertical;
+}
+
+.profile-card input::placeholder,
+.profile-card textarea::placeholder {
+  color: var(--muted);
+  opacity: 0.72;
+}
+
+.profile-card input:focus,
+.profile-card select:focus,
+.profile-card textarea:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px
+    color-mix(in srgb, var(--accent) 18%, transparent);
+}
+
+.profile-help-copy {
+  margin: 14px 0 12px;
+  color: var(--muted);
+  font-family: var(--workspace-font);
+  font-size: 0.82rem;
+  line-height: 1.35;
+}
+
+.profile-chip-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.profile-chip {
+  min-height: 34px;
+  padding: 5px 12px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  color: var(--ink);
+  background: transparent;
+  font-family: var(--workspace-font);
+  font-size: 0.82rem;
+  cursor: pointer;
+}
+
+.profile-chip:hover {
+  border-color: var(--accent);
+}
+
+.profile-chip-selected {
+  border-color: var(--button);
+  color: var(--button-text);
+  background: var(--button);
+}
+
+.profile-chip-selected:hover {
+  border-color: var(--button-hover);
+  background: var(--button-hover);
+}
+
+.profile-chip > span {
+  margin-right: 5px;
+}
+
+.profile-custom-hobby {
+  margin-top: 14px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 96px;
+  gap: 8px;
+}
+
+.profile-custom-hobby > button {
+  border: 0;
+  border-radius: 11px;
+  color: var(--button-text);
+  background: var(--button);
+  font-family: var(--workspace-font);
+  font-size: 0.86rem;
+  cursor: pointer;
+}
+
+.profile-custom-hobby > button:hover {
+  background: var(--button-hover);
+}
+
+.profile-added-hobbies {
+  margin-top: 9px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.profile-added-hobbies > button {
+  padding: 4px 9px;
+  border: 0;
+  border-radius: 999px;
+  color: var(--accent);
+  background: var(--accent-soft);
+  font-family: var(--workspace-font);
+  cursor: pointer;
+}
+
+.profile-support-grid {
+  margin-top: 16px;
+}
+
+.profile-textarea-grid {
+  margin-top: 18px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.profile-watch-grid {
+  margin-top: 18px;
+}
+
+.profile-about-card > textarea {
+  min-height: 192px;
+  margin-top: 18px;
+}
+
+.profile-private-note {
+  margin: 12px 0 0;
+  color: var(--muted);
+  font-family: var(--workspace-font);
+  font-size: 0.76rem;
+  line-height: 1.35;
+}
+
+@media (max-width: 1180px) {
+  .profile-identity-card,
+  .profile-music-card,
+  .profile-screen-card,
+  .profile-watch-card,
+  .profile-hobbies-card,
+  .profile-support-card,
+  .profile-manual-card,
+  .profile-about-card {
+    grid-column: 1 / -1;
+  }
+
+  .profile-about-card > textarea {
+    min-height: 120px;
+  }
+}
+
+@media (max-width: 760px) {
+  .profile-page-header {
+    grid-template-columns: 1fr auto;
+  }
+
+  .profile-page-header time {
+    display: none;
+  }
+
+  .profile-page-header h2 {
+    font-size: 2rem;
+  }
+
+  .profile-identity-content {
+    grid-template-columns: 1fr;
+  }
+
+  .profile-photo-area {
+    align-items: flex-start;
+  }
+
+  .profile-field-grid,
+  .profile-textarea-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .profile-field-wide {
+    grid-column: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .profile-card {
+    padding: 16px;
+  }
+
+  .profile-theme-banner {
+    padding: 16px;
+  }
+
+  .profile-custom-hobby {
+    grid-template-columns: 1fr;
+  }
+
+  .profile-custom-hobby > button {
+    min-height: 40px;
+  }
+}

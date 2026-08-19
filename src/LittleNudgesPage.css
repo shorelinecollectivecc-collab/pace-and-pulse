@@ -1,0 +1,523 @@
+.little-journal-page {
+  width: 100%;
+  min-width: 0;
+  padding-bottom: 36px;
+  color: var(--ink);
+}
+
+.little-journal-header {
+  min-height: 76px;
+  padding: 2px 4px 12px;
+  border-bottom: 1px solid var(--line);
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto auto;
+  align-items: start;
+  gap: 18px;
+}
+
+.little-journal-header p,
+.little-journal-header h2,
+.journal-section-heading p,
+.journal-section-heading h3 {
+  margin: 0;
+}
+
+.little-journal-header p,
+.journal-section-heading p {
+  color: var(--accent);
+  font-family: var(--workspace-font);
+}
+
+.little-journal-header p {
+  font-size: 0.9rem;
+}
+
+.little-journal-header h2 {
+  color: var(--ink);
+  font-family: var(--display-font);
+  font-size: clamp(2rem, 3.2vw, 3.05rem);
+  font-weight: 400;
+  line-height: 1;
+}
+
+.little-journal-header > span,
+.little-journal-header time {
+  margin-top: 16px;
+  color: var(--muted);
+  font-family: var(--workspace-font);
+  font-size: 0.84rem;
+}
+
+.little-journal-banner {
+  min-height: 98px;
+  margin-top: 14px;
+  padding: 18px 25px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  background-position: center;
+  background-size: cover;
+  box-shadow: 0 10px 24px rgba(29, 31, 25, 0.13);
+  display: flex;
+  align-items: center;
+}
+
+.little-journal-banner > div {
+  padding: 9px 15px;
+  border: 1px solid
+    color-mix(in srgb, var(--line) 70%, transparent);
+  border-radius: 13px;
+  background: color-mix(
+    in srgb,
+    var(--surface) 82%,
+    transparent
+  );
+  backdrop-filter: blur(4px);
+}
+
+.little-journal-banner p,
+.little-journal-banner span {
+  margin: 0;
+  color: var(--banner-text);
+}
+
+.little-journal-banner p {
+  font-family: var(--display-font);
+  font-size: 1.8rem;
+  line-height: 1;
+}
+
+.little-journal-banner span {
+  display: block;
+  margin-top: 3px;
+  color: var(--banner-muted);
+  font-family: var(--workspace-font);
+  font-size: 0.82rem;
+}
+
+.journal-now-card,
+.journal-reminders-section {
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  background: var(--surface);
+  box-shadow: 0 10px 24px rgba(29, 31, 25, 0.13);
+}
+
+.journal-now-card {
+  min-height: 105px;
+  margin-top: 14px;
+  padding: 17px 20px;
+  display: grid;
+  grid-template-columns: 140px minmax(0, 1fr) 185px;
+  align-items: center;
+}
+
+.journal-now-card > div {
+  min-width: 0;
+  padding: 0 18px;
+}
+
+.journal-now-card > div:first-child {
+  padding-left: 0;
+}
+
+.journal-now-card > div:last-child {
+  padding-right: 0;
+}
+
+.journal-now-card > div + div {
+  border-left: 1px solid var(--line);
+}
+
+.journal-now-card p,
+.journal-now-card strong,
+.journal-now-card span {
+  display: block;
+  margin: 0;
+}
+
+.journal-now-card p {
+  color: var(--accent);
+  font-family: var(--workspace-font);
+  font-size: 0.78rem;
+}
+
+.journal-clock strong {
+  color: var(--number);
+  font-family: var(--display-font);
+  font-size: 2.35rem;
+  font-weight: 400;
+  line-height: 1;
+}
+
+.journal-next-nudge strong {
+  color: var(--ink);
+  font-family: var(--display-font);
+  font-size: 1.65rem;
+  font-weight: 400;
+  line-height: 1;
+}
+
+.journal-next-nudge span {
+  margin-top: 3px;
+  color: var(--muted);
+  font-family: var(--workspace-font);
+  font-size: 0.78rem;
+}
+
+.journal-notification-state {
+  text-align: right;
+}
+
+.journal-notification-state button {
+  min-height: 36px;
+  margin-top: 6px;
+  padding: 5px 13px;
+  border: 1px solid var(--button);
+  border-radius: 10px;
+  color: var(--button-text);
+  background: var(--button);
+  font-family: var(--workspace-font);
+  cursor: pointer;
+  transition:
+    background 150ms ease,
+    transform 150ms ease;
+}
+
+.journal-notification-state button:hover {
+  background: var(--button-hover);
+  transform: translateY(-1px);
+}
+
+.journal-reminders-section {
+  margin-top: 14px;
+  padding: 19px 20px 20px;
+}
+
+.journal-section-heading {
+  min-height: 53px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--line);
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 14px;
+}
+
+.journal-section-heading p {
+  font-size: 0.8rem;
+}
+
+.journal-section-heading h3 {
+  color: var(--ink);
+  font-family: var(--display-font);
+  font-size: 1.65rem;
+  font-weight: 400;
+  line-height: 1;
+}
+
+.journal-section-heading > span {
+  margin-top: 9px;
+  color: var(--muted);
+  font-family: var(--workspace-font);
+  font-size: 0.76rem;
+}
+
+.journal-reminder-grid {
+  margin-top: 14px;
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.journal-reminder-card {
+  position: relative;
+  min-width: 0;
+  min-height: 220px;
+  padding: 13px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 15px;
+  background: color-mix(
+    in srgb,
+    var(--surface) 80%,
+    var(--background)
+  );
+  transition:
+    opacity 160ms ease,
+    border-color 160ms ease,
+    transform 160ms ease;
+}
+
+.journal-reminder-card:hover {
+  border-color: color-mix(
+    in srgb,
+    var(--accent) 60%,
+    var(--line)
+  );
+  transform: translateY(-1px);
+}
+
+.journal-reminder-card-off {
+  opacity: 0.55;
+}
+
+.journal-reminder-title {
+  min-height: 66px;
+  display: grid;
+  grid-template-columns: 30px minmax(0, 1fr) 34px;
+  align-items: start;
+  gap: 7px;
+}
+
+.journal-reminder-title > span {
+  color: var(--symbol);
+  font-family: var(--display-font);
+  font-size: 1.7rem;
+  line-height: 1;
+}
+
+.journal-reminder-title h4,
+.journal-reminder-title p {
+  margin: 0;
+}
+
+.journal-reminder-title h4 {
+  color: var(--ink);
+  font-family: var(--display-font);
+  font-size: 1.25rem;
+  font-weight: 400;
+  line-height: 1;
+}
+
+.journal-reminder-title p {
+  margin-top: 3px;
+  color: var(--muted);
+  font-family: var(--workspace-font);
+  font-size: 0.67rem;
+  line-height: 1.2;
+}
+
+.journal-reminder-toggle {
+  position: relative;
+  width: 32px;
+  height: 18px;
+  padding: 0;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: var(--accent-soft);
+  cursor: pointer;
+}
+
+.journal-reminder-toggle > span {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--muted);
+  transition: transform 160ms ease;
+}
+
+.journal-reminder-toggle[aria-checked="true"] {
+  background: var(--button);
+}
+
+.journal-reminder-toggle[aria-checked="true"] > span {
+  background: var(--button-text);
+  transform: translateX(14px);
+}
+
+.journal-reminder-settings {
+  margin-top: 10px;
+  display: grid;
+  gap: 6px;
+}
+
+.journal-reminder-settings select,
+.journal-reminder-settings input {
+  width: 100%;
+  min-width: 0;
+  height: 34px;
+  padding: 0 9px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  outline: none;
+  color: var(--ink);
+  background: var(--surface);
+  font-family: var(--workspace-font);
+  font-size: 0.72rem;
+}
+
+.journal-reminder-settings select:focus,
+.journal-reminder-settings input:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 2px
+    color-mix(in srgb, var(--accent) 18%, transparent);
+}
+
+.journal-reminder-settings option {
+  color: var(--ink);
+  background: var(--surface);
+}
+
+.journal-reminder-footer {
+  margin-top: 11px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 7px;
+}
+
+.journal-reminder-footer span,
+.journal-reminder-footer strong {
+  display: block;
+  font-family: var(--workspace-font);
+}
+
+.journal-reminder-footer span {
+  color: var(--muted);
+  font-size: 0.65rem;
+}
+
+.journal-reminder-footer strong {
+  color: var(--number);
+  font-size: 0.78rem;
+  font-weight: 400;
+}
+
+.journal-reminder-footer > button {
+  min-height: 36px;
+  padding: 5px 11px;
+  border: 0;
+  border-radius: 9px;
+  color: var(--button-text);
+  background: var(--button);
+  font-family: var(--workspace-font);
+  font-size: 0.72rem;
+  cursor: pointer;
+  transition:
+    background 150ms ease,
+    transform 150ms ease;
+}
+
+.journal-reminder-footer > button:hover {
+  background: var(--button-hover);
+  transform: translateY(-1px);
+}
+
+.journal-reminder-undo {
+  width: 100%;
+  margin-top: 5px;
+  padding: 2px;
+  border: 0;
+  color: var(--muted);
+  background: transparent;
+  font-family: var(--workspace-font);
+  font-size: 0.65rem;
+  cursor: pointer;
+}
+
+.journal-reminder-undo:hover {
+  color: var(--accent);
+}
+
+.little-journal-page button:focus-visible,
+.little-journal-page select:focus-visible,
+.little-journal-page input:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.little-journal-page::-webkit-scrollbar {
+  width: 9px;
+}
+
+.little-journal-page::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.little-journal-page::-webkit-scrollbar-thumb {
+  border: 2px solid transparent;
+  border-radius: 999px;
+  background: var(--accent);
+  background-clip: padding-box;
+}
+
+@media (max-width: 1360px) {
+  .journal-reminder-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 1000px) {
+  .little-journal-header {
+    grid-template-columns: minmax(0, 1fr) auto;
+  }
+
+  .little-journal-header > span {
+    display: none;
+  }
+
+  .journal-now-card {
+    grid-template-columns: 120px minmax(0, 1fr);
+  }
+
+  .journal-notification-state {
+    grid-column: 1 / -1;
+    margin-top: 14px;
+    padding: 14px 0 0 !important;
+    border-top: 1px solid var(--line);
+    border-left: 0 !important;
+    text-align: left;
+  }
+
+  .journal-reminder-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 680px) {
+  .little-journal-header {
+    min-height: auto;
+    grid-template-columns: 1fr;
+  }
+
+  .little-journal-header time {
+    margin-top: 0;
+  }
+
+  .little-journal-header h2 {
+    font-size: 2.1rem;
+  }
+
+  .little-journal-banner {
+    padding: 14px;
+  }
+
+  .journal-now-card {
+    grid-template-columns: 1fr;
+  }
+
+  .journal-now-card > div {
+    padding: 12px 0;
+  }
+
+  .journal-now-card > div + div {
+    border-top: 1px solid var(--line);
+    border-left: 0;
+  }
+
+  .journal-reminder-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .journal-section-heading {
+    display: block;
+  }
+
+  .journal-section-heading > span {
+    display: block;
+  }
+}
